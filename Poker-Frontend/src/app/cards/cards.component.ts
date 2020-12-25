@@ -84,7 +84,7 @@ export class CardsComponent implements OnInit {
 
 
   setEstimation(vote: number):void {
-    this.connectionService.connection.next( {
+    this.connectionService.votings.next( {
       user: this.username, type: 'votings', text: vote
     });
 

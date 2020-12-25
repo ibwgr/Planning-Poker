@@ -13,7 +13,7 @@ export class TextViewComponent implements OnInit{
   @Input() public username: string;
 
   constructor(private connectionService: ConnectionService) {
-    connectionService.connection.subscribe((data) => {
+    connectionService.ac.subscribe((data) => {
     const message = JSON.parse(data);
 
     if (message.type === 'chat-message'){
@@ -27,7 +27,7 @@ export class TextViewComponent implements OnInit{
 
 
   submitText() {
-    this.connectionService.connection.next( {
+    this.connectionService.ac.next( {
        type: 'chat-message', text: this.textcontent, user: this.username
     });
     this.messages.unshift(this.textcontent);

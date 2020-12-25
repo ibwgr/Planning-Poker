@@ -9,6 +9,7 @@ export class ConnectionService {
 
   constructor() { }
 
-  connection: WebSocketSubject<any> = webSocket({url: 'ws://localhost:6969', deserializer: e => e.data})
+  votings: WebSocketSubject<any> = webSocket({url: 'ws://localhost:6969/wss1', deserializer: e => e.data})
+  ac: WebSocketSubject<any> = webSocket({url: 'ws://localhost:6969/wss2', deserializer: e => e.data})
 
 }

@@ -17,7 +17,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
 
   constructor(connectionService: ConnectionService) {
 
-    connectionService.connection.subscribe((data) => {
+    connectionService.votings.subscribe((data) => {
       const message = JSON.parse(data);
 
       if (message.type === "chat-message"){
