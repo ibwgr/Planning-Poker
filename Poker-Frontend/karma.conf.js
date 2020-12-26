@@ -23,9 +23,9 @@ module.exports = function (config) {
     },
 
     customLaunchers: {
-      ChromeHeadlessNoSandbox: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
+      FirefoxHeadlessNoSandbox: {
+        base: 'Firefox',
+        flags: ['-headless']
       }
     },
 
@@ -34,7 +34,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_DEBUG,
     autoWatch: false,
-    browsers: ['Chrome'],
+    browsers: ['Firefox'],
     singleRun: false,
     restartOnFileChange: true
   });
