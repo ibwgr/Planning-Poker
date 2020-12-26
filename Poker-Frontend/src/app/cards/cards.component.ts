@@ -26,7 +26,7 @@ export class CardsComponent implements OnInit {
 
 
   constructor(private connectionService: ConnectionService) {
-    connectionService.wss2.subscribe((data) => {
+    connectionService.connection.subscribe((data) => {
       const message = JSON.parse(data);
 
       if (message.type === 'newRound'){
@@ -99,7 +99,7 @@ export class CardsComponent implements OnInit {
 
 
   setEstimation(vote: number):void {
-    this.connectionService.wss2.next( {
+    this.connectionService.connection.next( {
       user: this.username + ": ", type: 'votings', text: vote
     });
 
@@ -120,7 +120,7 @@ export class CardsComponent implements OnInit {
 
     this.votes = [];
     this.resetValues = null;
-    this.connectionService.wss2.next( {
+    this.connectionService.connection.next( {
       type: 'newRound'
     });
 

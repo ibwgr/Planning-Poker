@@ -16,7 +16,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
 
   constructor(private connectionService: ConnectionService) {
 
-    connectionService.wss2.subscribe((data) => {
+    connectionService.connection.subscribe((data) => {
       const message = JSON.parse(data);
 
       if (message.type === 'votings'){
@@ -44,7 +44,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
       .filter(this.removeZeros());
     this.averageEstimation = this.calcAverage(estimations);
 
-    this.connectionService.wss2.next( {
+    this.connectionService.connection.next( {
       type: 'averageEstimation', text: this.averageEstimation
     });
 

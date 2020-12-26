@@ -14,7 +14,7 @@ export class TextViewComponent implements OnInit, OnChanges{
   @Input() resetValues;
 
   constructor(private connectionService: ConnectionService) {
-    connectionService.wss2.subscribe((data) => {
+    connectionService.connection.subscribe((data) => {
     const message = JSON.parse(data);
 
     if (message.type === 'chat-message'){
@@ -35,7 +35,7 @@ export class TextViewComponent implements OnInit, OnChanges{
 
 
   submitText() {
-    this.connectionService.wss2.next( {
+    this.connectionService.connection.next( {
        type: 'chat-message', text: this.textcontent, user: this.username
     });
     this.messages.unshift(this.textcontent);
