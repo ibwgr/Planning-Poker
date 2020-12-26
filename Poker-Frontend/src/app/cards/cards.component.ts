@@ -1,6 +1,5 @@
-import {Component, EventEmitter, OnInit} from '@angular/core';
-import {ConnectionService} from "../connection.service";
-import {Subject} from "rxjs";
+import {Component, OnInit} from '@angular/core';
+import {ConnectionService} from '../connection.service';
 
 @Component({
   selector: 'app-cards',
