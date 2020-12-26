@@ -22,4 +22,4 @@ script:
     - cd Poker-Frontend
     - npm install
 #    - npm run lint
-    - npm run test headless
+    - npm run test-headless
