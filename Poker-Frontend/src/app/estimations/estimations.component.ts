@@ -9,44 +9,46 @@ import {ConnectionService} from "../connection.service";
 export class EstimationsComponent implements OnInit, OnChanges {
 
   @Input() votes;
-  @Input() resetAverage;
+  @Input() resetValues;
   public averageEstimation: number;
 
-  public messages: any;
 
 
-  constructor(connectionService: ConnectionService) {
+  constructor(private connectionService: ConnectionService) {
 
-    connectionService.votings.subscribe((data) => {
+    connectionService.wss2.subscribe((data) => {
       const message = JSON.parse(data);
 
-      if (message.type === "chat-message"){
-        this.messages.push(message.user + ' ' + message.text);
-      }
-
-      else if (message.type === 'votings'){
+      if (message.type === 'votings'){
         this.votes.push(message.user + ' ' + message.text);
+      } else if (message.type === 'newRound'){
+        this.votes = [];
+        this.averageEstimation = null;
+      } else if (message.type === 'averageEstimation'){
+        this.averageEstimation = message.text;
       }
-      else {
-        console.log('keine Message');
-      }
-    })
+    });
   }
 
   ngOnInit(): void {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.averageEstimation = this.resetAverage
+    this.averageEstimation = this.resetValues
   }
 
 
-  calculateAverage(votes): any{
+  showResults(votes): any{
     const estimations = this
       .removeUsernames(votes)
       .filter(this.removeZeros());
+    this.averageEstimation = this.calcAverage(estimations);
 
-    return this.averageEstimation = this.calcAverage(estimations);
+    this.connectionService.wss2.next( {
+      type: 'averageEstimation', text: this.averageEstimation
+    });
+
+
   }
 
 

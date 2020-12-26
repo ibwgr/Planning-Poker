@@ -26,7 +26,7 @@ describe('EstimationsComponent', () => {
   it('should calculate right average',  () => {
 
     const votes = [2, 3, 4];
-    expect(component.calculateAverage(votes)).toEqual(3);
+    expect(component.showResults(votes)).toEqual(3);
 
   });
 

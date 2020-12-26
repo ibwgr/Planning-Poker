@@ -25,17 +25,12 @@ webSocketServer1.on('connection', (webSocketClient) => {
 
 webSocketServer2.on('connection', (webSocketClient) => {
     webSocketClient.on('message', (incomingMessage) => {
-        const message = incomingMessage ? JSON.parse(incomingMessage) : {};
         webSocketServer2.clients.forEach((client) => {
             if (client !== webSocketClient && client.readyState === WebSocket.OPEN) {
-                client.send(JSON.stringify({
-                    type: message.type,
-                    text: message.text,
-                    user: message.user + ": ",
-                }));
+                client.send(incomingMessage);
             }
-        })
-    })
+        });
+    });
 });
 
 server.on('upgrade', function upgrade(request, socket, head) {
