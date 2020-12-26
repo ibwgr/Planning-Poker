@@ -19,10 +19,6 @@ describe('EstimationsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
   it('should calculate right average',  () => {
 
     const votes = [2, 3, 4];
