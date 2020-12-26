@@ -21,10 +21,25 @@ export class CardsComponent implements OnInit {
   public votes: any = [];
   freezeCards: boolean = false;
 
-  public resetAverage = [];
+  public resetValues = [];
 
 
-  constructor(private connectionService: ConnectionService) { }
+  constructor(private connectionService: ConnectionService) {
+    connectionService.connection.subscribe((data) => {
+      const message = JSON.parse(data);
+
+      if (message.type === 'newRound'){
+        this.freezeCards = false;
+        this.buttonClicked = false;
+        this.toggle1 = false;
+        this.toggle2 = false;
+        this.toggle3 = false;
+        this.toggle5 = false;
+        this.toggle8 = false;
+        this.toggle0 = false;
+      }
+    });
+  }
 
   ngOnInit(): void {
   }
@@ -84,10 +99,10 @@ export class CardsComponent implements OnInit {
 
   setEstimation(vote: number):void {
     this.connectionService.connection.next( {
-      user: this.username, type: 'votings', text: vote
+      user: this.username + ": ", type: 'votings', text: vote
     });
 
-    this.votes.push(vote);
+    this.votes.push(this.username + ": ", vote);
     this.buttonClicked = true;
     this.freezeCards = true
   }
@@ -103,7 +118,10 @@ export class CardsComponent implements OnInit {
     this.toggle0 = false;
 
     this.votes = [];
-    this.resetAverage = null;
+    this.resetValues = null;
+    this.connectionService.connection.next( {
+      type: 'newRound'
+    });
 
 
   }

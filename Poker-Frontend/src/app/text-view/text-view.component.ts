@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {ConnectionService} from "../connection.service";
 
 @Component({
@@ -6,11 +6,12 @@ import {ConnectionService} from "../connection.service";
   templateUrl: './text-view.component.html',
   styleUrls: ['./text-view.component.css']
 })
-export class TextViewComponent implements OnInit{
+export class TextViewComponent implements OnInit, OnChanges{
 
   public messages: any = [];
   public textcontent: string;
   @Input() public username: string;
+  @Input() resetValues;
 
   constructor(private connectionService: ConnectionService) {
     connectionService.connection.subscribe((data) => {
@@ -18,11 +19,18 @@ export class TextViewComponent implements OnInit{
 
     if (message.type === 'chat-message'){
       this.messages.unshift(message.user + ' ' + message.text);
-    }})};
+    } else if(message.type === 'newRound'){
+      this.messages = [];
+    }
+    })};
 
 
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.messages = this.resetValues
   }
 
 

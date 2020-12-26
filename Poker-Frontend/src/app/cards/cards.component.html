@@ -10,7 +10,7 @@
 
   <div class="buttons">
   <button mat-raised-button color="base" (click)="newRound()" class="newRound">New Round</button>
-  <app-estimations [votes]="votes" [resetAverage]="resetAverage"></app-estimations>
+  <app-estimations [votes]="votes" [resetValues]="resetValues"></app-estimations>
   </div>
 
 
@@ -47,6 +47,6 @@
     <button mat-flat-button color="primary" *ngIf="toggle0" class="voteButton" (click)="setEstimation(0)" [class.buttonClicked]="buttonClicked">Vote now for no estimation!</button>
 </div>
 </div>
-<app-text-view [username]="username"></app-text-view>
+<app-text-view [username]="username" [resetValues]="resetValues"></app-text-view>
 
 
