@@ -7,7 +7,8 @@
     "build": "npm run ng build",
     "test": "npm run ng test",
     "lint": "npm run ng lint",
-    "e2e": "npm run ng e2e"
+    "e2e": "npm run ng e2e",
+    "test-headless": "ng test --watch=false --browsers=ChromeHeadless"
   },
   "private": true,
   "dependencies": {
