@@ -1,11 +1,17 @@
 dist: trusty
 sudo: false
 
+
+env:
+  global:
+    - MOZ_HEADLESS=1
+
 language: node_js
 node_js:
   - '12'
 
-
+addons:
+  firefox: latest
 
 cache:
   directories:
