@@ -20,6 +20,7 @@ export class CardsComponent implements OnInit {
   votes: any = [];
   freezeCards: boolean = false;
   resetMessages = [];
+  enterUsername: any;
 
 
   constructor(private connectionService: ConnectionService) {

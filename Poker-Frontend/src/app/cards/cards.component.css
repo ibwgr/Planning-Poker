@@ -77,3 +77,10 @@ mat-card:hover {
   margin-top: 50px;
   display: inline-flex;
 }
+
+.enterUsername {
+  margin-left: 10px;
+  width: max-content;
+  height: 20px;
+  font-size: 10px;
+}
