@@ -21,7 +21,7 @@ export class CardsComponent implements OnInit {
   public votes: any = [];
   freezeCards: boolean = false;
 
-  public resetValues = [];
+  public resetMessages = [];
 
 
   constructor(private connectionService: ConnectionService) {
@@ -37,6 +37,7 @@ export class CardsComponent implements OnInit {
         this.toggle5 = false;
         this.toggle8 = false;
         this.toggle0 = false;
+        this.votes = [];
       }
     });
   }
@@ -118,7 +119,7 @@ export class CardsComponent implements OnInit {
     this.toggle0 = false;
 
     this.votes = [];
-    this.resetValues = null;
+    this.resetMessages = [];
     this.connectionService.connection.next( {
       type: 'newRound'
     });

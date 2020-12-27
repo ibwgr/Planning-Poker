@@ -11,7 +11,7 @@ export class TextViewComponent implements OnInit, OnChanges{
   public messages: any = [];
   public textcontent: string;
   @Input() public username: string;
-  @Input() resetValues;
+  @Input() resetMessages;
 
   constructor(private connectionService: ConnectionService) {
     connectionService.connection.subscribe((data) => {
@@ -30,7 +30,7 @@ export class TextViewComponent implements OnInit, OnChanges{
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.messages = this.resetValues
+    this.messages = this.resetMessages
   }
 
 
