@@ -147,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608392687538</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="deployment-tests">
+      <created>1609089685345</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609089685345</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +181,7 @@
     <MESSAGE value="1st component" />
     <MESSAGE value="fist commit" />
     <MESSAGE value="angular project" />
-    <option name="LAST_COMMIT_MESSAGE" value="angular project" />
+    <MESSAGE value="deployment-tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="deployment-tests" />
   </component>
 </project>
