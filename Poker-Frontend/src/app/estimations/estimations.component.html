@@ -1,11 +1,14 @@
 <div class="container">
   <div class="average">
 
-    <button mat-raised-button color="base" class="averageButton" (click)="showResults(votes)">Show results</button>
+    <button mat-raised-button color="base" class="averageButton" (click)="showResults(votes)">Show Results</button>
 
     <div class="result">{{averageEstimation}}</div>
+    <div class="highest">{{highestEstimation}}</div>
+    <div class="lowest">{{lowestEstimation}}</div>
 
-    <div class="votes" *ngFor="let v of votes">{{v}}</div>
+
+    <div class="votes" *ngFor="let v of allEstimations">{{v}}</div>
 
   </div>
 </div>

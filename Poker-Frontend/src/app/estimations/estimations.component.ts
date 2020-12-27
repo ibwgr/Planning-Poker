@@ -10,7 +10,10 @@ export class EstimationsComponent implements OnInit, OnChanges {
 
   @Input() votes;
   @Input() resetValues;
-  public averageEstimation: number;
+  public averageEstimation: string;
+  public highestEstimation: string;
+  public lowestEstimation: string;
+  public  allEstimations: any[];
 
 
 
@@ -24,8 +27,18 @@ export class EstimationsComponent implements OnInit, OnChanges {
       } else if (message.type === 'newRound'){
         this.votes = [];
         this.averageEstimation = null;
+        this.highestEstimation = null;
+        this.lowestEstimation = null;
+        this.allEstimations = [];
       } else if (message.type === 'averageEstimation'){
         this.averageEstimation = message.text;
+        this.showEstimation(this.votes)
+      } else if (message.type === 'highestEstimation'){
+        this.highestEstimation = message.text;
+      } else if (message.type === 'lowestEstimation'){
+        this.lowestEstimation = message.text;
+      } else if (message.type === 'estimations'){
+        this.allEstimations = message.text;
       }
     });
   }
@@ -34,7 +47,10 @@ export class EstimationsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.averageEstimation = this.resetValues
+    this.averageEstimation = null;
+    this.highestEstimation = null;
+    this.lowestEstimation = null;
+    this.allEstimations = [];
   }
 
 
@@ -42,12 +58,26 @@ export class EstimationsComponent implements OnInit, OnChanges {
     const estimations = this
       .removeUsernames(votes)
       .filter(this.removeZeros());
-    this.averageEstimation = this.calcAverage(estimations);
 
+    this.averageEstimation = "Average Estimation: " + this.calcAverage(estimations);
     this.connectionService.connection.next( {
       type: 'averageEstimation', text: this.averageEstimation
     });
 
+    this.highestEstimation = "HighestEstimation: " + Math.max.apply(null,estimations);
+    this.connectionService.connection.next( {
+      type: 'highestEstimation', text: this.highestEstimation
+    });
+
+    this.lowestEstimation = "LowestEstimation: " + Math.min.apply(null,estimations);
+    this.connectionService.connection.next( {
+      type: 'lowestEstimation', text: this.lowestEstimation
+    });
+
+    this.showEstimation(this.votes)
+    this.connectionService.connection.next( {
+      type: 'estimations', text: this.votes
+    });
 
   }
 
@@ -86,5 +116,9 @@ export class EstimationsComponent implements OnInit, OnChanges {
   private calcSum(estimations) {
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     return estimations.reduce(reducer, 0);
+  }
+
+  private showEstimation(votes){
+    this.allEstimations = votes
   }
 }
