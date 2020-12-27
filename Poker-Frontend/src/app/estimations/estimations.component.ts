@@ -73,7 +73,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
       type: 'lowestEstimation', text: this.lowestEstimation
     });
 
-    this.showEstimation(this.votes)
+    this.showEstimation(this.votes);
     this.connectionService.connection.next( {
       type: 'estimations', text: this.votes
     });
@@ -98,7 +98,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
     };
   }
 
-  private calcAverage(estimations){
+   calcAverage(estimations){
     const average = this.calcSum(estimations) / estimations.length;
     const fibonacci:number[] = [0, 1, 2, 3, 5, 8];
     let nextFibonacci = 0;
