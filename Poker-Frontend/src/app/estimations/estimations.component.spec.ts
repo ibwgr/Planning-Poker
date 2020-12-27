@@ -26,5 +26,9 @@ describe('EstimationsComponent', () => {
 
   });
 
+  it('should calculate the right sum', () => {
+    const votes = [2,3,4];
+    expect(component.calcSum(votes)).toEqual(9)
+  });
 
 });

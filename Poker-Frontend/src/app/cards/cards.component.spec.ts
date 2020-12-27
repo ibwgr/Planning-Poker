@@ -18,5 +18,4 @@ describe('CardsComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
 });
