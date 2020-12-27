@@ -16,12 +16,10 @@ export class CardsComponent implements OnInit {
   toggle0: boolean = false;
 
   buttonClicked: boolean = false;
-
   username: string;
-  public votes: any = [];
+  votes: any = [];
   freezeCards: boolean = false;
-
-  public resetMessages = [];
+  resetMessages = [];
 
 
   constructor(private connectionService: ConnectionService) {
@@ -123,7 +121,5 @@ export class CardsComponent implements OnInit {
     this.connectionService.connection.next( {
       type: 'newRound'
     });
-
-
   }
 }
