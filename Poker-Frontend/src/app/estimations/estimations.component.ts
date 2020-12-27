@@ -9,7 +9,6 @@ import {ConnectionService} from "../connection.service";
 export class EstimationsComponent implements OnInit, OnChanges {
 
   @Input() votes;
-  @Input() resetValues;
   public averageEstimation: string;
   public highestEstimation: string;
   public lowestEstimation: string;
