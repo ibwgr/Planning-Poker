@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ConnectionService} from '../connection.service';
 
 @Component({
@@ -8,12 +8,7 @@ import {ConnectionService} from '../connection.service';
 })
 export class CardsComponent implements OnInit {
 
-  toggle1: boolean = false;
-  toggle2: boolean = false;
-  toggle3: boolean = false;
-  toggle5: boolean = false;
-  toggle8: boolean = false;
-  toggle0: boolean = false;
+  @Input() fibonacciMaster
 
   buttonClicked: boolean = false;
   userEntered: boolean = false;
@@ -22,6 +17,7 @@ export class CardsComponent implements OnInit {
   freezeCards: boolean = false;
   resetMessages = [];
   loggedInUsers: any = [];
+  activeCard: any;
 
 
   constructor(private connectionService: ConnectionService) {
@@ -31,13 +27,8 @@ export class CardsComponent implements OnInit {
       if (message.type === 'newRound'){
         this.freezeCards = false;
         this.buttonClicked = false;
-        this.toggle1 = false;
-        this.toggle2 = false;
-        this.toggle3 = false;
-        this.toggle5 = false;
-        this.toggle8 = false;
-        this.toggle0 = false;
         this.votes = [];
+        this.activeCard = null;
       }
 
      else if (message.type === 'users'){
@@ -48,59 +39,6 @@ export class CardsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  selectCard(id:number):void {
-
-    if (id === 1) {
-      this.toggle1 = !this.toggle1;
-      this.toggle2 = false;
-      this.toggle3 = false;
-      this.toggle5 = false;
-      this.toggle8 = false;
-      this.toggle0 = false;
-      }
-    else if (id === 2) {
-      this.toggle2 = !this.toggle2;
-      this.toggle1 = false;
-      this.toggle3 = false;
-      this.toggle5 = false;
-      this.toggle8 = false;
-      this.toggle0 = false;
-    }
-    else if (id === 3) {
-      this.toggle3 = !this.toggle3;
-      this.toggle2 = false;
-      this.toggle1 = false;
-      this.toggle5 = false;
-      this.toggle8 = false;
-      this.toggle0 = false;
-    }
-    else if (id === 5) {
-      this.toggle5 = !this.toggle5;
-      this.toggle2 = false;
-      this.toggle3 = false;
-      this.toggle1 = false;
-      this.toggle8 = false;
-      this.toggle0 = false;
-    }
-    else if (id === 8) {
-      this.toggle8 = !this.toggle8;
-      this.toggle2 = false;
-      this.toggle3 = false;
-      this.toggle5 = false;
-      this.toggle1 = false;
-      this.toggle0 = false;
-    }
-    else if (id === 0) {
-      this.toggle0 = !this.toggle0;
-      this.toggle2 = false;
-      this.toggle3 = false;
-      this.toggle5 = false;
-      this.toggle8 = false;
-      this.toggle1 = false;
-    }
-  }
-
 
   setEstimation(vote: number):void {
     this.connectionService.connection.next( {
@@ -115,13 +53,7 @@ export class CardsComponent implements OnInit {
   newRound():void {
     this.freezeCards = false;
     this.buttonClicked = false;
-    this.toggle1 = false;
-    this.toggle2 = false;
-    this.toggle3 = false;
-    this.toggle5 = false;
-    this.toggle8 = false;
-    this.toggle0 = false;
-
+    this.activeCard = null;
     this.votes = [];
     this.resetMessages = [];
     this.connectionService.connection.next( {

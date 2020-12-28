@@ -5,6 +5,11 @@
 
 .cards {
   display: flex;
+  flex-direction: column;
+}
+
+.cardsContainer{
+  display: flex;
 }
 
 .card {

@@ -23,46 +23,22 @@
 
   </div>
 
-
-  <div class="cards" [class.freezeCards]="freezeCards">
-
-    <mat-card [ngClass]="{'clicked': toggle1, '': !toggle1}" class="card"  (click)="selectCard(1)" >
-      <label>1</label>
-    </mat-card>
-    <button mat-flat-button color="primary" *ngIf="toggle1" class="voteButton" (click)="setEstimation(1)" [class.buttonClicked]="buttonClicked" >Vote now for 1 SP!</button>
-
-    <mat-card [ngClass]="{'clicked': toggle2, '': !toggle2}" class="card"  (click)="selectCard(2)">
-      <label>2</label>
-    </mat-card>
-    <button mat-flat-button color="primary" *ngIf="toggle2" class="voteButton" (click)="setEstimation(2)" [class.buttonClicked]="buttonClicked">Vote now for 2 SP!</button>
-
-    <mat-card [ngClass]="{'clicked': toggle3, '': !toggle3}" class="card"  (click)="selectCard(3)">
-      <label>3</label>
-    </mat-card>
-    <button mat-flat-button color="primary" *ngIf="toggle3" class="voteButton" (click)="setEstimation(3)" [class.buttonClicked]="buttonClicked">Vote now for 3 SP!</button>
-
-    <mat-card [ngClass]="{'clicked': toggle5, '': !toggle5}" class="card"  (click)="selectCard(5)">
-      <label>5</label>
-    </mat-card>
-    <button mat-flat-button color="primary" *ngIf="toggle5" class="voteButton" (click)="setEstimation(5)" [class.buttonClicked]="buttonClicked">Vote now for 5 SP!</button>
-
-    <mat-card [ngClass]="{'clicked': toggle8, '': !toggle8}" class="card"  (click)="selectCard(8)">
-      <label>8</label>
-    </mat-card>
-    <button mat-flat-button color="primary" *ngIf="toggle8" class="voteButton" (click)="setEstimation(8)" [class.buttonClicked]="buttonClicked">Vote now for 8 SP!</button>
-
-    <mat-card [ngClass]="{'clicked': toggle0, '': !toggle0}" class="card"  (click)="selectCard(0)">
-      <img style="height: 40px" src="assets/images/coffee.png"  >
-    </mat-card>
-    <button mat-flat-button color="primary" *ngIf="toggle0" class="voteButton" (click)="setEstimation(0)" [class.buttonClicked]="buttonClicked">Vote now for no estimation!</button>
-</div>
-
+  <div class="cardsContainer">
+    <div class="cards" [class.freezeCards]="freezeCards" *ngFor="let pokerCard of fibonacciMaster, let i = index">
+      <mat-card class="card" *ngIf="pokerCard !=0; else coffeCard" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard" ><label>{{pokerCard}}</label></mat-card>
+      <button mat-flat-button color="primary" *ngIf="activeCard === pokerCard && pokerCard != 0" class="voteButton" (click)="setEstimation(pokerCard)" [class.buttonClicked]="buttonClicked" >Vote now for {{pokerCard}} SP!</button>
+      <ng-template #coffeCard>
+        <mat-card class="card" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard" ><img style="height: 40px" src="assets/images/coffee.png"  ></mat-card>
+        <button mat-flat-button color="primary" *ngIf="activeCard === 0" class="voteButton" (click)="setEstimation(0)" [class.buttonClicked]="buttonClicked">Vote now for no estimation!</button>
+      </ng-template>
+    </div>
+  </div>
 
 </div>
 
 <div class="bottomContent">
   <app-text-view [username]="username" [resetMessages]="resetMessages"></app-text-view>
-  <app-estimations [votes]="votes"></app-estimations>
+  <app-estimations [votes]="votes" [fibonacciMaster]="fibonacciMaster"></app-estimations>
 </div>
 
 

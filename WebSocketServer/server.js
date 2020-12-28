@@ -9,15 +9,10 @@ const webSocketServer = new WebSocket.Server({ server: server });
 app.use(express.static(__dirname + "/"));
 
 webSocketServer.on('connection', (webSocketClient) => {
-    webSocketClient.on('message', (incomingMessage) => {
-        const message = incomingMessage ? JSON.parse(incomingMessage) : {};
+    webSocketClient.on('message', (message) => {
         webSocketServer.clients.forEach((client) => {
             if (client !== webSocketClient && client.readyState === WebSocket.OPEN) {
-                client.send(JSON.stringify({
-                    type: message.type,
-                    text: message.text,
-                    user: message.user + ":",
-                }));
+                client.send(message);
             }
         })
     })
