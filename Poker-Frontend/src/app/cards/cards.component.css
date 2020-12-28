@@ -1,5 +1,4 @@
 .container {
-
   background-color: darkgreen;
 }
 
@@ -10,6 +9,8 @@
 
 .cardsContainer{
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
@@ -44,7 +45,7 @@ mat-card:hover {
 .voteButton {
   height: 40px;
   width: auto;
-  margin-top: 50px;
+  margin-top: 30px;
   border-color: white;
   border-style: solid;
 }
@@ -111,9 +112,6 @@ mat-card:hover {
   margin-top: 10px;
 }
 
-.singleUser {
-  margin-left: 10px;
-}
 
 .userView {
   padding-top: 20px;
@@ -125,7 +123,9 @@ mat-card:hover {
 }
 
 .loggedInUsers {
-  margin-top: 10px;
+  margin-right: 10px;
+  background-color: green;
+  padding: 10px;
 }
 
 

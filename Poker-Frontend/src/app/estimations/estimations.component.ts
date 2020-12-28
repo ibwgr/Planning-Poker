@@ -10,10 +10,10 @@ export class EstimationsComponent implements OnInit, OnChanges {
 
   @Input() votes;
   @Input() fibonacciMaster;
-  public averageEstimation: string;
-  public highestEstimation: string;
-  public lowestEstimation: string;
-  public allEstimations: any[];
+  averageEstimation: string;
+  highestEstimation: string;
+  lowestEstimation: string;
+  allEstimations: any[];
 
 
 
@@ -61,7 +61,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
 
     this.averageEstimation = "Average Estimation: " + this.calcAverage(estimations);
     this.connectionService.connection.next( {
-      type: 'averageEstimation', text: this.averageEstimation
+      type: 'averageEstimation', text: this.averageEstimation,
     });
 
     this.highestEstimation = "Highest Estimation: " + Math.max.apply(null,estimations);
@@ -78,7 +78,6 @@ export class EstimationsComponent implements OnInit, OnChanges {
     this.connectionService.connection.next( {
       type: 'estimations', text: this.votes
     });
-
   }
 
 
@@ -118,6 +117,6 @@ export class EstimationsComponent implements OnInit, OnChanges {
   }
 
   private showEstimation(votes){
-    this.allEstimations = votes
+    this.allEstimations = votes;
   }
 }
