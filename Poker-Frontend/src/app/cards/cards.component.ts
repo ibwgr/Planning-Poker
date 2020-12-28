@@ -68,4 +68,12 @@ export class CardsComponent implements OnInit {
     this.loggedInUsers.push(this.username);
     this.userEntered = true;
   }
+
+  deleteUser() {
+    this.connectionService.connection.next({
+      type: 'deleteUser', user: this.username
+    });
+    
+
+  }
 }

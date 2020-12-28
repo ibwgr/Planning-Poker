@@ -11,7 +11,8 @@
 
 
   <div class="buttons">
-    <button mat-raised-button color="base" class="enterUsername" (click)="enterUser()" [class.userSubmitted]="userEntered">Submit Username</button>
+    <button mat-raised-button color="base" class="enterUsername" (click)="enterUser()" [class.invisible]="userEntered">Submit Username</button>
+    <button mat-raised-button color="base" class="enterUsername" (click)="deleteUser()" [class.invisible]="!userEntered">Delete Username</button>
   <button mat-raised-button color="base" (click)="newRound()" class="newRound">New Round</button>
 
     <div class="userView">
