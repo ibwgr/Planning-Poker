@@ -16,11 +16,12 @@ export class CardsComponent implements OnInit {
   toggle0: boolean = false;
 
   buttonClicked: boolean = false;
+  userEntered: boolean = false;
   username: string;
   votes: any = [];
   freezeCards: boolean = false;
   resetMessages = [];
-  enterUsername: any;
+  loggedInUsers: any = [];
 
 
   constructor(private connectionService: ConnectionService) {
@@ -37,6 +38,10 @@ export class CardsComponent implements OnInit {
         this.toggle8 = false;
         this.toggle0 = false;
         this.votes = [];
+      }
+
+     else if (message.type === 'users'){
+        this.loggedInUsers.push(message.user);
       }
     });
   }
@@ -122,5 +127,13 @@ export class CardsComponent implements OnInit {
     this.connectionService.connection.next( {
       type: 'newRound'
     });
+  }
+
+  enterUser() {
+    this.connectionService.connection.next({
+      type: 'users', user: this.username
+    });
+    this.loggedInUsers.push(this.username);
+    this.userEntered = true;
   }
 }
