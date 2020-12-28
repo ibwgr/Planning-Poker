@@ -16,12 +16,13 @@ describe('EstimationsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EstimationsComponent);
     component = fixture.componentInstance;
+    component.fibonacciMaster = [1, 2, 3, 5, 8, 0]
     fixture.detectChanges();
   });
 
   it('should calculate right average',  () => {
 
-    const votes = [2, 3, 4];
+    const votes = [2, 3, 5, 0, 1];
     expect(component.calcAverage(votes)).toEqual(3);
 
   });
