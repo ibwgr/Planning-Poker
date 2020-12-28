@@ -2,7 +2,7 @@
 
   <mat-form-field [class.loggedIn]="userEntered" class="user">
     <mat-label class="name-label">Your Name</mat-label>
-    <input matInput type ="text" [(ngModel)]="username" [readonly]="userEntered">
+    <input matInput type ="text" [(ngModel)]="username" [readonly]="userEntered" >
     <button mat-button *ngIf="username" matSuffix mat-icon-button aria-label="Clear" [class.invisible]="userEntered"  (click)="username=''">
       <mat-icon>close</mat-icon>
     </button>
@@ -17,7 +17,7 @@
     <div class="userView">
       <label class="currentUser">Current Users:</label>
       <div class="loggedInUsers" *ngFor="let l of loggedInUsers">
-        <label class="singleUser">{{l + ',' + ' '}}</label>
+        <label class="singleUser">{{l}}</label>
       </div>
     </div>
 

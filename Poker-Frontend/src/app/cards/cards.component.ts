@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ConnectionService} from '../connection.service';
+import {LocalStorageService} from "../local-storage.service";
 
 @Component({
   selector: 'app-cards',
@@ -8,7 +9,7 @@ import {ConnectionService} from '../connection.service';
 })
 export class CardsComponent implements OnInit {
 
-  @Input() fibonacciMaster
+  @Input() fibonacciMaster;
 
   buttonClicked: boolean = false;
   userEntered: boolean = false;
@@ -20,7 +21,7 @@ export class CardsComponent implements OnInit {
   activeCard: any;
 
 
-  constructor(private connectionService: ConnectionService) {
+  constructor(private connectionService: ConnectionService, private localStorage: LocalStorageService) {
     connectionService.connection.subscribe((data) => {
       const message = JSON.parse(data);
 
@@ -29,6 +30,7 @@ export class CardsComponent implements OnInit {
         this.buttonClicked = false;
         this.votes = [];
         this.activeCard = null;
+        this.localStorage.delete("message")
       }
 
      else if (message.type === 'users'){
@@ -38,14 +40,15 @@ export class CardsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.username = this.localStorage.get("username");
   }
 
   setEstimation(vote: number):void {
     this.connectionService.connection.next( {
-      user: this.username + ": ", type: 'votings', text: vote
+      user: this.username, type: 'votings', text: vote
     });
 
-    this.votes.push(this.username + ": ", vote);
+    this.votes.push(this.username + ":", vote);
     this.buttonClicked = true;
     this.freezeCards = true
   }
@@ -59,6 +62,7 @@ export class CardsComponent implements OnInit {
     this.connectionService.connection.next( {
       type: 'newRound'
     });
+    this.localStorage.delete("message")
   }
 
   enterUser() {
@@ -67,5 +71,11 @@ export class CardsComponent implements OnInit {
     });
     this.loggedInUsers.push(this.username);
     this.userEntered = true;
+    this.persistUsername("username", this.username)
+  }
+
+
+  persistUsername(key: string, value: any){
+    this.localStorage.set(key, value)
   }
 }
