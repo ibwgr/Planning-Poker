@@ -31,10 +31,10 @@ export class CardsComponent implements OnInit {
         this.votes = [];
         this.activeCard = null;
         this.localStorage.delete("message")
-      }
-
-     else if (message.type === 'users'){
+      } else if (message.type === 'addUser'){
         this.loggedInUsers.push(message.user);
+      } else if (message.type === 'deleteUser'){
+        this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1)
       }
     });
   }
@@ -67,7 +67,7 @@ export class CardsComponent implements OnInit {
 
   enterUser() {
     this.connectionService.connection.next({
-      type: 'users', user: this.username
+      type: 'addUser', user: this.username
     });
     this.loggedInUsers.push(this.username);
     this.userEntered = true;
@@ -83,7 +83,9 @@ export class CardsComponent implements OnInit {
     this.connectionService.connection.next({
       type: 'deleteUser', user: this.username
     });
-    
-
+    this.loggedInUsers.splice(this.loggedInUsers.indexOf(this.username), 1)
+    this.username = "";
+    this.persistUsername("username", this.username)
+    this.userEntered = false;
   }
 }
