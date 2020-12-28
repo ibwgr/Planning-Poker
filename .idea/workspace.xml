@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="roberto-deployment" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -245,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609102245235</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="small changes">
+      <created>1609105525023</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609105525023</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +276,7 @@
     <MESSAGE value="fist commit" />
     <MESSAGE value="angular project" />
     <MESSAGE value="deployment-tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="deployment-tests" />
+    <MESSAGE value="small changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
   </component>
 </project>

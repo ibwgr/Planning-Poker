@@ -77,3 +77,51 @@ mat-card:hover {
   margin-top: 50px;
   display: inline-flex;
 }
+
+.enterUsername {
+  margin-left: 10px;
+  margin-right: 20px;
+  height: 40px;
+}
+
+.bottomContent {
+  display: flex;
+}
+
+.loggedIn {
+  pointer-events: none;
+}
+
+.invisible {
+  display: none;
+}
+
+.userSubmitted {
+  pointer-events: none;
+  background-color: grey;
+}
+
+.currentUser {
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.singleUser {
+  margin-left: 10px;
+}
+
+.userView {
+  padding-top: 20px;
+  margin-top: 20px;
+  color: white;
+  display: contents;
+  font-family: "TheSans Swisscom", serif;
+  font-size: medium;
+}
+
+.loggedInUsers {
+  margin-top: 10px;
+}
+
+
+
