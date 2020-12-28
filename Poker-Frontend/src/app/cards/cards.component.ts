@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ConnectionService} from '../connection.service';
 
 @Component({
@@ -7,6 +7,7 @@ import {ConnectionService} from '../connection.service';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
+  @Input() fibonacciMaster;
 
   toggle1: boolean = false;
   toggle2: boolean = false;
@@ -22,6 +23,7 @@ export class CardsComponent implements OnInit {
   freezeCards: boolean = false;
 
   public resetMessages = [];
+  aktiveCard: any;
 
 
   constructor(private connectionService: ConnectionService) {
@@ -120,10 +122,12 @@ export class CardsComponent implements OnInit {
 
     this.votes = [];
     this.resetMessages = [];
+    this.aktiveCard = null;
     this.connectionService.connection.next( {
       type: 'newRound'
     });
 
 
   }
+
 }
