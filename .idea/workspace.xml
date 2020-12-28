@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f783bab0-6b96-49f2-99f6-ae889d244b9c" name="Default Changelist" comment="fist commit">
+    <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.ts" afterDir="false" />
@@ -37,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Roberto" />
+        <entry key="$PROJECT_DIR$" value="roberto-deployment" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,18 +70,19 @@
       <recent name="$PROJECT_DIR$/WebSocketServer/src" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="E2E Tests (Planning-Poker-Frontend)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/Planning-Poker-Frontend/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -114,7 +113,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -151,7 +150,105 @@
       <option name="project" value="LOCAL" />
       <updated>1608392687538</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="deployment-tests">
+      <created>1609089685345</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609089685345</updated>
+    </task>
+    <task id="LOCAL-00005" summary="deployment-tests">
+      <created>1609094135268</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609094135268</updated>
+    </task>
+    <task id="LOCAL-00006" summary="deployment-tests">
+      <created>1609094415037</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609094415037</updated>
+    </task>
+    <task id="LOCAL-00007" summary="deployment-tests">
+      <created>1609095053942</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609095053942</updated>
+    </task>
+    <task id="LOCAL-00008" summary="deployment-tests">
+      <created>1609095402483</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609095402483</updated>
+    </task>
+    <task id="LOCAL-00009" summary="deployment-tests">
+      <created>1609096080301</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609096080301</updated>
+    </task>
+    <task id="LOCAL-00010" summary="deployment-tests">
+      <created>1609096586158</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609096586158</updated>
+    </task>
+    <task id="LOCAL-00011" summary="deployment-tests">
+      <created>1609096948479</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609096948479</updated>
+    </task>
+    <task id="LOCAL-00012" summary="deployment-tests">
+      <created>1609097333885</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609097333885</updated>
+    </task>
+    <task id="LOCAL-00013" summary="deployment-tests">
+      <created>1609100237943</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609100237943</updated>
+    </task>
+    <task id="LOCAL-00014" summary="deployment-tests">
+      <created>1609100347864</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609100347864</updated>
+    </task>
+    <task id="LOCAL-00015" summary="deployment-tests">
+      <created>1609101064564</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609101064564</updated>
+    </task>
+    <task id="LOCAL-00016" summary="deployment-tests">
+      <created>1609102245235</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1609102245235</updated>
+    </task>
+    <task id="LOCAL-00017" summary="small changes">
+      <created>1609105525023</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609105525023</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,12 +259,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -177,6 +275,8 @@
     <MESSAGE value="1st component" />
     <MESSAGE value="fist commit" />
     <MESSAGE value="angular project" />
-    <option name="LAST_COMMIT_MESSAGE" value="angular project" />
+    <MESSAGE value="deployment-tests" />
+    <MESSAGE value="small changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
   </component>
 </project>

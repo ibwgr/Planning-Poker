@@ -12,7 +12,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
   public averageEstimation: string;
   public highestEstimation: string;
   public lowestEstimation: string;
-  public  allEstimations: any[];
+  public allEstimations: any[];
 
 
 
@@ -63,17 +63,17 @@ export class EstimationsComponent implements OnInit, OnChanges {
       type: 'averageEstimation', text: this.averageEstimation
     });
 
-    this.highestEstimation = "HighestEstimation: " + Math.max.apply(null,estimations);
+    this.highestEstimation = "Highest Estimation: " + Math.max.apply(null,estimations);
     this.connectionService.connection.next( {
       type: 'highestEstimation', text: this.highestEstimation
     });
 
-    this.lowestEstimation = "LowestEstimation: " + Math.min.apply(null,estimations);
+    this.lowestEstimation = "Lowest Estimation: " + Math.min.apply(null,estimations);
     this.connectionService.connection.next( {
       type: 'lowestEstimation', text: this.lowestEstimation
     });
 
-    this.showEstimation(this.votes)
+    this.showEstimation(this.votes);
     this.connectionService.connection.next( {
       type: 'estimations', text: this.votes
     });
@@ -81,7 +81,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
   }
 
 
-  private removeUsernames(votes) {
+  removeUsernames(votes) {
     return votes.map(singleVote => {
       if (typeof singleVote === 'string') {
         return parseInt(singleVote.slice(-1))
@@ -92,13 +92,13 @@ export class EstimationsComponent implements OnInit, OnChanges {
   }
 
 
-  private removeZeros() {
+  removeZeros() {
     return value => {
       return value > 0
     };
   }
 
-  private calcAverage(estimations){
+   calcAverage(estimations){
     const average = this.calcSum(estimations) / estimations.length;
     const fibonacci:number[] = [0, 1, 2, 3, 5, 8];
     let nextFibonacci = 0;
@@ -112,7 +112,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
   }
 
 
-  private calcSum(estimations) {
+   calcSum(estimations) {
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     return estimations.reduce(reducer, 0);
   }

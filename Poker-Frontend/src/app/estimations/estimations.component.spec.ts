@@ -22,9 +22,13 @@ describe('EstimationsComponent', () => {
   it('should calculate right average',  () => {
 
     const votes = [2, 3, 4];
-    expect(component.showResults(votes)).toEqual(3);
+    expect(component.calcAverage(votes)).toEqual(3);
 
   });
 
+  it('should calculate the right sum', () => {
+    const votes = [2,3,4];
+    expect(component.calcSum(votes)).toEqual(9)
+  });
 
 });

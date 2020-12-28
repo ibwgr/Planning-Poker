@@ -9,6 +9,6 @@ export class ConnectionService {
 
   constructor() { }
 
-  connection: WebSocketSubject<any> = webSocket({url: 'ws://localhost:6969/wss2', deserializer: e => e.data})
+  connection: WebSocketSubject<any> = webSocket({url: 'wss://poker-websocket-server.herokuapp.com/', deserializer: e => e.data})
 
 }

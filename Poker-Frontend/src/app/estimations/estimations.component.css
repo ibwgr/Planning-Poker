@@ -6,7 +6,7 @@
 .result {
   font-size: 20px;
   margin-left: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
   color: yellow;
   font-weight: bold;
 }
@@ -14,7 +14,7 @@
 .highest {
   font-size: 20px;
   margin-left: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
   color: red;
   font-weight: bold;
 }
@@ -22,8 +22,8 @@
 .lowest {
   font-size: 20px;
   margin-left: 20px;
-  margin-top: 10px;
-  color: blue;
+  margin-top: 20px;
+  color: aquamarine;
   font-weight: bold;
 }
 
@@ -33,7 +33,7 @@
 
 .votes {
   font-size: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 5px;
   color: white;
   font-weight: bold;
@@ -41,4 +41,5 @@
 
 .averageButton {
   height: 40px;
+  margin-top: 20px;
 }
