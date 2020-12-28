@@ -1,5 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {ConnectionService} from "../connection.service";
+import {LocalStorageService} from "../local-storage.service";
 
 @Component({
   selector: 'app-text-view',
@@ -8,17 +9,20 @@ import {ConnectionService} from "../connection.service";
 })
 export class TextViewComponent implements OnInit, OnChanges{
 
-  public messages: any = [];
-  public textcontent: string;
-  @Input() public username: string;
-  @Input() resetMessages;
 
-  constructor(private connectionService: ConnectionService) {
+  @Input() username: string;
+  @Input() resetMessages;
+  messages: any = [];
+  textcontent: string;
+
+
+  constructor(private connectionService: ConnectionService, private localStorage: LocalStorageService) {
     connectionService.connection.subscribe((data) => {
     const message = JSON.parse(data);
 
     if (message.type === 'chat-message'){
       this.messages.unshift(message.user + ' ' + message.text);
+      this.persistMessages("message", this.messages);
     } else if(message.type === 'newRound'){
       this.messages = [];
     }
@@ -27,6 +31,8 @@ export class TextViewComponent implements OnInit, OnChanges{
 
 
   ngOnInit(): void {
+    if (this.localStorage.get("message") != null)
+   this.messages = this.localStorage.get("message");
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -39,6 +45,12 @@ export class TextViewComponent implements OnInit, OnChanges{
        type: 'chat-message', text: this.textcontent, user: this.username
     });
     this.messages.unshift(this.textcontent);
-    this.textcontent = ''
+    this.textcontent = '';
+    this.persistMessages("message", this.messages);
+
   }
+
+  persistMessages(key: string, value: any){
+      this.localStorage.set(key, value)
+    }
 }
