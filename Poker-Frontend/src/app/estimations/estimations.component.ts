@@ -9,6 +9,7 @@ import {ConnectionService} from "../connection.service";
 export class EstimationsComponent implements OnInit, OnChanges {
 
   @Input() votes;
+  @Input() fibonacciMaster;
   public averageEstimation: string;
   public highestEstimation: string;
   public lowestEstimation: string;
@@ -100,10 +101,9 @@ export class EstimationsComponent implements OnInit, OnChanges {
 
    calcAverage(estimations){
     const average = this.calcSum(estimations) / estimations.length;
-    const fibonacci:number[] = [0, 1, 2, 3, 5, 8];
     let nextFibonacci = 0;
 
-    fibonacci.forEach((fibonacci) => {
+    this.fibonacciMaster.forEach((fibonacci) => {
       if(average <= fibonacci && nextFibonacci == 0){
         nextFibonacci = fibonacci;
       }
