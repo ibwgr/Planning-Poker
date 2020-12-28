@@ -19,6 +19,9 @@ export class CardsComponent implements OnInit {
   resetMessages = [];
   loggedInUsers: any = [];
   activeCard: any;
+  adminChecked: any = false;
+  adminDisabled: any = false;
+  imgSrc = "assets/images/coffee.png"
 
 
   constructor(private connectionService: ConnectionService, private localStorage: LocalStorageService) {
@@ -87,5 +90,17 @@ export class CardsComponent implements OnInit {
     this.username = "";
     this.persistUsername("username", this.username)
     this.userEntered = false;
+  }
+
+  activateAdmin() {
+
+  }
+
+  redCoffee() {
+    this.imgSrc = "assets/images/redcoffee.png"
+  }
+
+  blackCoffee() {
+    this.imgSrc = "assets/images/coffee.png"
   }
 }

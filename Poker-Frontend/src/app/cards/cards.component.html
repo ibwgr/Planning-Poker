@@ -11,6 +11,7 @@
 
 
   <div class="buttons">
+    <mat-checkbox color="base" class="mat-checkbox" [checked]="adminChecked" [disabled]="adminDisabled" (change)="activateAdmin()">Make me Admin</mat-checkbox>
     <button mat-raised-button color="base" class="enterUsername" (click)="enterUser()" [class.invisible]="userEntered">Submit Username</button>
     <button mat-raised-button color="base" class="enterUsername" (click)="deleteUser()" [class.invisible]="!userEntered">Delete Username</button>
   <button mat-raised-button color="base" (click)="newRound()" class="newRound">New Round</button>
@@ -29,7 +30,7 @@
       <mat-card class="card" *ngIf="pokerCard !=0; else coffeCard" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard" ><label>{{pokerCard}}</label></mat-card>
       <button mat-flat-button color="primary" *ngIf="activeCard === pokerCard && pokerCard != 0" class="voteButton" (click)="setEstimation(pokerCard)" [class.buttonClicked]="buttonClicked" >Vote now for {{pokerCard}} SP!</button>
       <ng-template #coffeCard>
-        <mat-card class="card" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard" ><img style="height: 40px" src="assets/images/coffee.png"  ></mat-card>
+        <mat-card class="card" (mouseover)="redCoffee()" (mouseout)="blackCoffee()" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard"><img style="height: 40px" [src]="imgSrc"></mat-card>
         <button mat-flat-button color="primary" *ngIf="activeCard === 0" class="voteButton" (click)="setEstimation(0)" [class.buttonClicked]="buttonClicked">Vote now for no estimation!</button>
       </ng-template>
     </div>
