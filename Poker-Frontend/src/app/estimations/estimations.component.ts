@@ -10,6 +10,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
 
   @Input() votes;
   @Input() fibonacciMaster;
+  @Input() adminChecked;
   averageEstimation: string;
   highestEstimation: string;
   lowestEstimation: string;

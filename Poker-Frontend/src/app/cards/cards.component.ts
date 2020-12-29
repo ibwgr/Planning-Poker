@@ -19,6 +19,9 @@ export class CardsComponent implements OnInit {
   resetMessages = [];
   loggedInUsers: any = [];
   activeCard: any;
+  adminChecked: boolean = false;
+  adminDisabled: boolean = false;
+  imgSrc = "assets/images/coffee.png"
 
 
   constructor(private connectionService: ConnectionService, private localStorage: LocalStorageService) {
@@ -31,10 +34,12 @@ export class CardsComponent implements OnInit {
         this.votes = [];
         this.activeCard = null;
         this.localStorage.delete("message")
-      }
-
-     else if (message.type === 'users'){
+      } else if (message.type === 'addUser'){
         this.loggedInUsers.push(message.user);
+      } else if (message.type === 'deleteUser'){
+        this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1)
+      } else if (message.type === 'toggleAdmin'){
+        this.adminDisabled = !this.adminDisabled;
       }
     });
   }
@@ -67,7 +72,7 @@ export class CardsComponent implements OnInit {
 
   enterUser() {
     this.connectionService.connection.next({
-      type: 'users', user: this.username
+      type: 'addUser', user: this.username
     });
     this.loggedInUsers.push(this.username);
     this.userEntered = true;
@@ -77,5 +82,30 @@ export class CardsComponent implements OnInit {
 
   persistUsername(key: string, value: any){
     this.localStorage.set(key, value)
+  }
+
+  deleteUser() {
+    this.connectionService.connection.next({
+      type: 'deleteUser', user: this.username
+    });
+    this.loggedInUsers.splice(this.loggedInUsers.indexOf(this.username), 1)
+    this.username = "";
+    this.persistUsername("username", this.username)
+    this.userEntered = false;
+  }
+
+  toggleAdmin() {
+    this.connectionService.connection.next({
+      type: 'toggleAdmin'
+    });
+    this.adminChecked = !this.adminChecked;
+  }
+
+  redCoffee() {
+    this.imgSrc = "assets/images/redcoffee.png"
+  }
+
+  blackCoffee() {
+    this.imgSrc = "assets/images/coffee.png"
   }
 }
