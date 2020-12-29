@@ -19,8 +19,8 @@ export class CardsComponent implements OnInit {
   resetMessages = [];
   loggedInUsers: any = [];
   activeCard: any;
-  adminChecked: any = false;
-  adminDisabled: any = false;
+  adminChecked: boolean = false;
+  adminDisabled: boolean = false;
   imgSrc = "assets/images/coffee.png"
 
 
@@ -38,6 +38,8 @@ export class CardsComponent implements OnInit {
         this.loggedInUsers.push(message.user);
       } else if (message.type === 'deleteUser'){
         this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1)
+      } else if (message.type === 'toggleAdmin'){
+        this.adminDisabled = !this.adminDisabled;
       }
     });
   }
@@ -92,8 +94,11 @@ export class CardsComponent implements OnInit {
     this.userEntered = false;
   }
 
-  activateAdmin() {
-
+  toggleAdmin() {
+    this.connectionService.connection.next({
+      type: 'toggleAdmin'
+    });
+    this.adminChecked = !this.adminChecked;
   }
 
   redCoffee() {

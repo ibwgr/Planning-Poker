@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/src/assets/images/redcoffee.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/docs/Poker-Frontend/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/docs/Poker-Frontend/vendor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/assets/images/coffee.png" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/assets/images/coffee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

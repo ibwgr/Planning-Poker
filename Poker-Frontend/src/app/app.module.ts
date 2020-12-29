@@ -19,6 +19,7 @@ import { TextViewComponent } from './text-view/text-view.component';
 import { MatListModule } from '@angular/material/list';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
     MatAutocompleteModule,
     MatListModule,
     ScrollingModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
