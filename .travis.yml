@@ -7,6 +7,7 @@ env:
   – DBUS_SESSION_BUS_ADDRESS=/dev/null
   – DISPLAY=:99.0
   – CHROME_BIN=chromium-browser
+  - MOZ_HEADLESS=1
 
 language: node_js
 node_js:
@@ -29,5 +30,6 @@ script:
     - cd Poker-Frontend
     - npm install
     - ./node_modules/protractor/bin/webdriver-manager update
-    - npm run e2e-headless
     - npm run test-headless
+    - npm run e2e-headless
+
