@@ -25,17 +25,22 @@ export class EstimationsComponent implements OnInit, OnChanges {
 
       if (message.type === 'votings'){
         this.votes.push(message.user + ' ' + message.text);
-      } else if (message.type === 'newRound'){
+      }
+      if (message.type === 'newRound'){
         this.votes = [];
         this.resetEstimations();
-      } else if (message.type === 'averageEstimation'){
+      }
+      if (message.type === 'averageEstimation'){
         this.averageEstimation = message.text;
         this.showEstimation(this.votes)
-      } else if (message.type === 'highestEstimation'){
+      }
+      if (message.type === 'highestEstimation'){
         this.highestEstimation = message.text;
-      } else if (message.type === 'lowestEstimation'){
+      }
+      if (message.type === 'lowestEstimation'){
         this.lowestEstimation = message.text;
-      } else if (message.type === 'estimations'){
+      }
+      if (message.type === 'estimations'){
         this.allEstimations = message.text;
       }
     });

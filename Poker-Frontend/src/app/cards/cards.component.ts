@@ -30,11 +30,14 @@ export class CardsComponent implements OnInit {
 
       if (message.type === 'newRound'){
         this.resetValues();
-      } else if (message.type === 'addUser'){
+      }
+      if (message.type === 'addUser'){
         this.loggedInUsers.push(message.user);
-      } else if (message.type === 'deleteUser'){
+      }
+      if (message.type === 'deleteUser'){
         this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1)
-      } else if (message.type === 'toggleAdmin'){
+      }
+      if (message.type === 'toggleAdmin'){
         this.adminDisabled = !this.adminDisabled;
       }
     });
