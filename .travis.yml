@@ -4,18 +4,23 @@ sudo: required
 
 env:
   global:
-    - MOZ_HEADLESS=1
+  – DBUS_SESSION_BUS_ADDRESS=/dev/null
+  – DISPLAY=:99.0
+  – CHROME_BIN=chromium-browser
 
 language: node_js
 node_js:
   - '12'
 
-
+addons:
+  chrome: stable
 
 cache:
   directories:
     - Poker-Frontend/node_modules
 
+before_script:
+  - sh -e /etc/init.d/xvfb start
 
 
 script:
