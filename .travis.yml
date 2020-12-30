@@ -21,6 +21,7 @@ cache:
 script:
     - cd Poker-Frontend
     - npm install
+    - ./node_modules/protractor/bin/webdriver-manager update --versions.chrome 2.3
 #    - npm run lint
     - npm run test-headless
     - npm run e2e
