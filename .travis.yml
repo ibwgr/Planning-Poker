@@ -29,6 +29,5 @@ script:
     - cd Poker-Frontend
     - npm install
     - ./node_modules/protractor/bin/webdriver-manager update
-#    - npm run lint
-    - npm run test
+    - npm run test-headless
     - npm run e2e-headless
