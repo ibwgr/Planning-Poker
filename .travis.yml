@@ -1,4 +1,4 @@
-dist: trusty
+dist: xenial
 sudo: required
 
 
@@ -13,7 +13,7 @@ node_js:
   - '12'
 
 addons:
-  chrome: beta
+  chrome: stable
 
 cache:
   directories:
