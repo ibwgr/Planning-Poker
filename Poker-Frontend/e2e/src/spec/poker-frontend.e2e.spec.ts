@@ -1,6 +1,5 @@
 import {browser, by, element, ElementFinder, protractor} from "protractor";
 import {AppPage} from "../app.po";
-import {timeout} from "rxjs/operators";
 
 
 describe("Planning-Poker Frontend tests", ()=> {

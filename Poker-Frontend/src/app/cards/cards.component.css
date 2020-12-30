@@ -93,6 +93,7 @@ mat-card:hover {
 .bottomContent {
   display: flex;
 }
+
 .topContent {
   display: flex;
 }
@@ -115,33 +116,36 @@ mat-card:hover {
   margin-top: 10px;
 }
 
-
 .userView {
-  padding-top: 20px;
-  margin-top: 20px;
   color: white;
-  display: contents;
+  display: flex;
   font-family: "TheSans Swisscom", serif;
   font-size: medium;
 }
 
 .loggedInUsers {
   margin-right: 10px;
-  background-color: green;
-  padding: 10px;
+  margin-top: 10px;
 }
+
 .userHandling{
   display: inline-block;
-  /*flex-direction: column;*/
 }
 
 .mat-slideToggle{
   color: white;
-  padding-left: 25px;
+  background-color: green;
+  padding: 10px;
+  margin-left: 20px;
 }
 
 ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
   background-color: lightgrey;
+}
+
+.singleUser {
+  background-color: green;
+  padding: 10px;
 }
 
 

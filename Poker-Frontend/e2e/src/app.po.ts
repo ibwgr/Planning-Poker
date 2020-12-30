@@ -12,7 +12,6 @@ const newRoundButtonLabel = by.css('.mat-base.mat-button-base.mat-raised-button.
 const newRoundButton = by.css('.mat-base.mat-button-base.mat-raised-button.newRound.ng-star-inserted');
 const firstCard = by.css('div:nth-of-type(1) > .card.mat-card.ng-star-inserted');
 const submitVoteButton = by.css('.mat-button-base.mat-flat-button.mat-primary.ng-star-inserted.voteButton > .mat-button-wrapper');
-const textView = by.css('.ng-star-inserted.text-area');
 const showResultsButton = by.css('.averageButton.mat-base.mat-button-base.mat-raised-button.ng-star-inserted');
 const deleteUserButton = by.css('.buttons [color=\'base\']:nth-of-type(2)');
 
@@ -82,12 +81,6 @@ export class AppPage {
     const button = element(submitVoteButton);
     await BrowserUtils.waitForElement(button);
     return button.click()
-  }
-
-  async getSumittedText(){
-    const textview = element(textView);
-    await BrowserUtils.waitForElement(textview);
-    return textview.getText()
   }
 
   async clickShowResultsButton(){
