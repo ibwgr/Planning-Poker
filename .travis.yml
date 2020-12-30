@@ -1,4 +1,4 @@
-dist: trusty
+dist: xenial
 sudo: true
 
 
@@ -15,6 +15,7 @@ node_js:
 
 addons:
   firefox: latest
+  chrome: stable
 
 
 
