@@ -17,6 +17,12 @@ cache:
   directories:
     - Poker-Frontend/node_modules
 
+before_script:
+  - "npm install -g protractor"
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - 'webdriver-manager update'
+  - 'webdriver-manager start 2>&1 &'
 
 script:
     - cd Poker-Frontend
