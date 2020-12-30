@@ -1,4 +1,4 @@
-
+dist: xenial
 sudo: true
 
 
@@ -13,7 +13,7 @@ node_js:
   - '12'
 
 addons:
-  chrome: stable
+  firefox: latest
 
 cache:
   directories:
@@ -29,5 +29,5 @@ script:
     - cd Poker-Frontend
     - npm install
     - ./node_modules/protractor/bin/webdriver-manager update
-    - npm run test-headless
     - npm run e2e-headless
+    - npm run test-headless
