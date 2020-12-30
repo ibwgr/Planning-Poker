@@ -15,7 +15,7 @@ node_js:
 
 addons:
   firefox: latest
-  chrome: stable
+
 
 
 cache:
