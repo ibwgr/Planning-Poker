@@ -10,8 +10,8 @@ const submittedUserLabel = by.css('.loggedInUsers.ng-star-inserted > .singleUser
 const adminToggle = by.css('.mat-slide-toggle-bar');
 const newRoundButtonLabel = by.css('.mat-base.mat-button-base.mat-raised-button.newRound.ng-star-inserted > .mat-button-wrapper');
 const newRoundButton = by.css('.mat-base.mat-button-base.mat-raised-button.newRound.ng-star-inserted');
-const firstCard = by.css('div:nth-of-type(1) > .card.mat-card.ng-star-inserted');
-const submitVoteButton = by.css('.mat-button-base.mat-flat-button.mat-primary.ng-star-inserted.voteButton > .mat-button-wrapper');
+const thirdCard = by.css('div:nth-of-type(3) > .card.mat-card.ng-star-inserted');
+const submitVoteButton = by.css('.mat-button-base.mat-flat-button.mat-primary.ng-star-inserted.voteButton');
 const showResultsButton = by.css('.averageButton.mat-base.mat-button-base.mat-raised-button.ng-star-inserted');
 const deleteUserButton = by.css('.buttons [color=\'base\']:nth-of-type(2)');
 
@@ -72,7 +72,7 @@ export class AppPage {
   }
 
   async clickFirstCard(){
-    const card = element(firstCard);
+    const card = element(thirdCard);
     await BrowserUtils.waitForElement(card);
     return card.click()
   }

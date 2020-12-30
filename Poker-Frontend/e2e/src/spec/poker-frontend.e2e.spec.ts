@@ -46,7 +46,7 @@ describe("Planning-Poker Frontend tests", ()=> {
 
   });
 
-  it('should click on 1st card and vote-button', async () => {
+  it('should click on 3rd card and vote-button', async () => {
     await page.clickFirstCard();
     browser.waitForAngular();
     await page.clickVoteButton();
@@ -62,11 +62,11 @@ describe("Planning-Poker Frontend tests", ()=> {
   it('should click results and show right estimations', async () => {
     await page.clickShowResultsButton();
     browser.waitForAngular();
-    expect(element(by.css('.result')).getText()).toBe('Average Estimation: 1');
-    expect(element(by.css('.highest')).getText()).toBe('Highest Estimation: 1');
-    expect(element(by.css('.lowest')).getText()).toBe('Lowest Estimation: 1');
+    expect(element(by.css('.result')).getText()).toBe('Average Estimation: 3');
+    expect(element(by.css('.highest')).getText()).toBe('Highest Estimation: 3');
+    expect(element(by.css('.lowest')).getText()).toBe('Lowest Estimation: 3');
     expect(element(by.css('app-estimations > div > div:nth-of-type(2) > div:nth-of-type(1)')).getText()).toBe('Roberto:');
-    expect(element(by.css('app-estimations > div > div:nth-of-type(2) > div:nth-of-type(2)')).getText()).toBe('1');
+    expect(element(by.css('app-estimations > div > div:nth-of-type(2) > div:nth-of-type(2)')).getText()).toBe('3');
   });
 
   it('should start new Round and clear results and text-view',  async () => {
