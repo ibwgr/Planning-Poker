@@ -8,6 +8,7 @@ describe("Planning-Poker Frontend tests", ()=> {
     page = new AppPage();
     await page.navigateTo();
     await browser.waitForAngularEnabled(true);
+    browser.driver.manage().window().setSize(1280,1080);
     done();
   });
 
@@ -47,7 +48,7 @@ describe("Planning-Poker Frontend tests", ()=> {
   });
 
   it('should click on 3rd card and vote-button', async () => {
-    await page.clickFirstCard();
+    await page.clickThirdCard();
     browser.waitForAngular();
     await page.clickVoteButton();
     expect(element(by.css('.mat-button-base.mat-flat-button.mat-primary.ng-star-inserted.voteButton')).getCssValue('background-color')).toBe('rgba(255, 0, 0, 1)')
@@ -60,6 +61,7 @@ describe("Planning-Poker Frontend tests", ()=> {
   });
 
   it('should click results and show right estimations', async () => {
+    browser.actions().sendKeys(protractor.Key.END).perform();
     await page.clickShowResultsButton();
     browser.waitForAngular();
     expect(element(by.css('.result')).getText()).toBe('Average Estimation: 3');

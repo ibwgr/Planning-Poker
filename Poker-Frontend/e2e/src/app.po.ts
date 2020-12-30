@@ -71,7 +71,7 @@ export class AppPage {
     return label.getText()
   }
 
-  async clickFirstCard(){
+  async clickThirdCard(){
     const card = element(thirdCard);
     await BrowserUtils.waitForElement(card);
     return card.click()
