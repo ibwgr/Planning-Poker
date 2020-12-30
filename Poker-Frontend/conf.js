@@ -10,10 +10,13 @@ const { SpecReporter, StacktraceOption } = require('jasmine-spec-reporter');
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
-    './src/**/*.e2e-spec.ts'
+    'e2e/src/spec/poker-frontend.e2e.spec.ts'
   ],
   capabilities: {
     browserName: 'chrome'
+  },
+  chromeOptions: {
+    args: ['--no-sandbox', '--disable-gpu', '--headless', '--window-size=1280,720', '--disable-dev-shm-usage']
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',

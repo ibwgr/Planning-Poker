@@ -88,9 +88,9 @@ export class CardsComponent implements OnInit {
     this.connectionService.connection.next({
       type: 'deleteUser', user: this.username
     });
-    this.loggedInUsers.splice(this.loggedInUsers.indexOf(this.username), 1)
+    this.loggedInUsers.splice(this.loggedInUsers.indexOf(this.username), 1);
     this.username = "";
-    this.persistUsername("username", this.username)
+    this.persistUsername("username", this.username);
     this.userEntered = false;
   }
 
