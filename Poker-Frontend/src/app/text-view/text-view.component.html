@@ -2,7 +2,7 @@
   <div class="text-view">
     <div class="content">
       <label>Acceptance Criterias
-        <textarea class="text-input" *ngIf="adminChecked" type="text" placeholder="enter here acceptance-criterias for your current story and press enter" [(ngModel)]="textcontent" (keyup.enter)="submitText()"></textarea>
+        <textarea class="text-input" *ngIf="adminChecked" type="text" placeholder="Enter here acceptance-criterias for your current story and press enter" [(ngModel)]="textcontent" (keyup.enter)="submitText()"></textarea>
         <textarea readonly class="text-area" *ngFor="let message of messages">{{message}}</textarea>
       </label>
     </div>

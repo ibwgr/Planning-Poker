@@ -27,10 +27,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
         this.votes.push(message.user + ' ' + message.text);
       } else if (message.type === 'newRound'){
         this.votes = [];
-        this.averageEstimation = null;
-        this.highestEstimation = null;
-        this.lowestEstimation = null;
-        this.allEstimations = [];
+        this.resetEstimations();
       } else if (message.type === 'averageEstimation'){
         this.averageEstimation = message.text;
         this.showEstimation(this.votes)
@@ -48,6 +45,10 @@ export class EstimationsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    this.resetEstimations()
+  }
+
+  private resetEstimations() {
     this.averageEstimation = null;
     this.highestEstimation = null;
     this.lowestEstimation = null;
@@ -61,26 +62,17 @@ export class EstimationsComponent implements OnInit, OnChanges {
       .filter(this.removeZeros());
 
     this.averageEstimation = "Average Estimation: " + this.calcAverage(estimations);
-    this.connectionService.connection.next( {
-      type: 'averageEstimation', text: this.averageEstimation,
-    });
+    this.sendToWebsocketServer('averageEstimation', this.averageEstimation);
 
     this.highestEstimation = "Highest Estimation: " + Math.max.apply(null,estimations);
-    this.connectionService.connection.next( {
-      type: 'highestEstimation', text: this.highestEstimation
-    });
+    this.sendToWebsocketServer('highestEstimation', this.highestEstimation)
 
     this.lowestEstimation = "Lowest Estimation: " + Math.min.apply(null,estimations);
-    this.connectionService.connection.next( {
-      type: 'lowestEstimation', text: this.lowestEstimation
-    });
+    this.sendToWebsocketServer('lowestEstimation', this.lowestEstimation)
 
     this.showEstimation(this.votes);
-    this.connectionService.connection.next( {
-      type: 'estimations', text: this.votes
-    });
+    this.sendToWebsocketServer('estimations', this.votes)
   }
-
 
   removeUsernames(votes) {
     return votes.map(singleVote => {
@@ -91,7 +83,6 @@ export class EstimationsComponent implements OnInit, OnChanges {
       }
     });
   }
-
 
   removeZeros() {
     return value => {
@@ -111,10 +102,15 @@ export class EstimationsComponent implements OnInit, OnChanges {
     return nextFibonacci;
   }
 
-
    calcSum(estimations) {
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     return estimations.reduce(reducer, 0);
+  }
+
+  private sendToWebsocketServer(messageType: string, messageContent: any) {
+    this.connectionService.connection.next({
+      type: messageType, text: messageContent,
+    });
   }
 
   private showEstimation(votes){

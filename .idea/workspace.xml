@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/header/header.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,13 +118,13 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f783bab0-6b96-49f2-99f6-ae889d244b9c" name="Default Changelist" comment="" />
+      <changelist id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="" />
       <created>1608390774367</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -134,6 +133,8 @@
       <workItem from="1608563032434" duration="5473000" />
       <workItem from="1608645948150" duration="1267000" />
       <workItem from="1608708271767" duration="12048000" />
+      <workItem from="1609260798332" duration="2011000" />
+      <workItem from="1609322284995" duration="4868000" />
     </task>
     <task id="LOCAL-00001" summary="1st component">
       <created>1608391579562</created>
