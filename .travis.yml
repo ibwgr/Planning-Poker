@@ -21,11 +21,15 @@ cache:
 
 before_script:
   - sh -e /etc/init.d/xvfb start
+  - npm i protractor
+  - ./node_modules/protractor/bin/webdriver-manager update
+  - webdriver-manager start
 
 
 script:
     - cd Poker-Frontend
     - npm install
+    - ./node_modules/protractor/bin/webdriver-manager update
 #    - npm run lint
     - npm run test-headless
     - npm run e2e-headless
