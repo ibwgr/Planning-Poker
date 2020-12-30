@@ -24,4 +24,4 @@ script:
     - npm install
 #    - npm run lint
     - npm run test-headless
-    - npm run e2e --protractor-config='conf.js'
+    - npm run e2e-headless
