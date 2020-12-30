@@ -17,6 +17,7 @@ addons:
   firefox: latest
   chrome: stable
 
+
 cache:
   directories:
     - Poker-Frontend/node_modules
