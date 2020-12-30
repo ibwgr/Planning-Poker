@@ -1,12 +1,12 @@
-dist: xenial
+dist: trusty
 sudo: true
 
 
 env:
   global:
-  – DBUS_SESSION_BUS_ADDRESS=/dev/null
-  – DISPLAY=:99.0
-  – CHROME_BIN=chromium-browser
+#  – DBUS_SESSION_BUS_ADDRESS=/dev/null
+#  – DISPLAY=:99.0
+#  – CHROME_BIN=chromium-browser
   - MOZ_HEADLESS=1
 
 language: node_js
@@ -15,7 +15,6 @@ node_js:
 
 addons:
   firefox: latest
-  chrome: stable
 
 cache:
   directories:
@@ -24,7 +23,7 @@ cache:
 
 before_script:
   - npm i protractor
-  - ./node_modules/protractor/bin/webdriver-manager update
+#  - ./node_modules/protractor/bin/webdriver-manager update
 
 
 script:
@@ -32,5 +31,5 @@ script:
     - npm install
     - ./node_modules/protractor/bin/webdriver-manager update
     - npm run test-headless
-    - npm run e2e-headless
+#    - npm run e2e-headless
 
