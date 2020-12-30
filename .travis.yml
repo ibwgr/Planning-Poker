@@ -20,7 +20,6 @@ cache:
     - Poker-Frontend/node_modules
 
 before_script:
-  - sh -e /etc/init.d/xvfb start
   - npm i protractor
   - ./node_modules/protractor/bin/webdriver-manager update
 
