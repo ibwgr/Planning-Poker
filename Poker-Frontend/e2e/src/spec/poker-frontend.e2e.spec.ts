@@ -30,8 +30,8 @@ describe("Planning-Poker Frontend tests", ()=> {
   });
 
   it('should enter and display username', async () => {
-    element(by.css('input#mat-input-0')).sendKeys('Roberto');
-    expect(element(by.css('input#mat-input-0')).getAttribute('value')).toBe('Roberto');
+    element(by.css('input#userNameInput')).sendKeys('Roberto');
+    expect(element(by.css('input#userNameInput')).getAttribute('value')).toBe('Roberto');
   });
 
   it('should submit and display username in current User Section',  async () => {
