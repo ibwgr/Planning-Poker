@@ -1,10 +1,11 @@
+<div class="main">
 <div class="container">
   <div class="topContent">
   <div class="userHandling">
   <mat-form-field [class.loggedIn]="userEntered" class="user">
     <mat-label class="name-label">Your Name</mat-label>
-    <input matInput type ="text" [(ngModel)]="username" [readonly]="userEntered" >
-    <button mat-button *ngIf="username" matSuffix mat-icon-button aria-label="Clear" [class.invisible]="userEntered"  (click)="username=''">
+    <input matInput type ="text" [(ngModel)]="username" [readonly]="userEntered" id="userNameInput">
+    <button mat-button *ngIf="username" matSuffix mat-icon-button aria-label="Clear"  [class.invisible]="userEntered"  (click)="username=''">
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
@@ -44,7 +45,7 @@
   <app-text-view [username]="username" [resetMessages]="resetMessages" [adminChecked]="adminChecked"></app-text-view>
   <app-estimations [votes]="votes" [fibonacciMaster]="fibonacciMaster" [adminChecked]="adminChecked"></app-estimations>
 </div>
-
+</div>
 
 
 
