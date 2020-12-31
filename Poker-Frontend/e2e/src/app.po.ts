@@ -3,7 +3,7 @@ import {BrowserUtils} from "./spec/BrowserUtils";
 
 
 const submittUserButtonLabel = by.css('.buttons [color=\'base\']:nth-of-type(1) .mat-button-wrapper');
-const usernameLabel = by.css('label#mat-form-field-label-1 > .name-label.ng-star-inserted.ng-tns-c17-0');
+const usernameLabel = by.xpath('//label[@id=\'mat-form-field-label-1\']/mat-label[.=\'Your Name\']');
 const adminlabel = by.css('.mat-slide-toggle-content');
 const userButton = by.css('.enterUsername.mat-base.mat-button-base.mat-raised-button');
 const submittedUserLabel = by.css('.loggedInUsers.ng-star-inserted > .singleUser');
@@ -23,7 +23,7 @@ export class AppPage {
   }
 
   async getTitleText(): Promise<string> {
-    return element(by.css('body > app-root > app-header > mat-toolbar > div > span.title')).getText() as Promise<string>;
+    return element(by.css('.title')).getText() as Promise<string>;
   }
 
   async submitUserButtonLabel(): Promise<string> {
