@@ -7,9 +7,10 @@
     "build": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
+    "e2e": "protractor conf.js",
     "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "ng build --prod",
+    "e2e-headless": "protractor protractor-conf.js"
   },
   "private": true,
   "dependencies": {
@@ -27,9 +28,11 @@
     "@angular/platform-browser-dynamic": "~10.0.3",
     "@angular/router": "~10.0.3",
     "chrome-launcher": "^0.13.4",
+    "chromedriver": "^87.0.4",
     "karma-cli": "^2.0.0",
     "karma-firefox-launcher": "^2.1.0",
     "rxjs": "~6.5.5",
+    "selenium-webdriver": "^4.0.0-alpha.8",
     "travis-cli": "^1.0.9",
     "tslib": "^2.0.0",
     "typescript": "~3.9.5",

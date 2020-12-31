@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -65,30 +55,37 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="15.3.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Poker-Frontend" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Poker-Frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Poker-Frontend" />
+      <recent name="$PROJECT_DIR$/Poker-Frontend/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Poker-Frontend" />
+      <recent name="$PROJECT_DIR$/Poker-Frontend/src" />
+      <recent name="$PROJECT_DIR$/Poker-Frontend/e2e/src/spec" />
       <recent name="$PROJECT_DIR$/Poker-Frontend/src/assets/images" />
       <recent name="$PROJECT_DIR$/Poker-Frontend/src/assets" />
-      <recent name="$PROJECT_DIR$/WebSocketServer/src" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="E2E Tests (Planning-Poker-Frontend)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/Planning-Poker-Frontend/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -119,7 +116,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -134,48 +131,6 @@
       <workItem from="1608563032434" duration="5473000" />
       <workItem from="1608645948150" duration="1267000" />
       <workItem from="1608708271767" duration="12048000" />
-    </task>
-    <task id="LOCAL-00001" summary="1st component">
-      <created>1608391579562</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1608391579562</updated>
-    </task>
-    <task id="LOCAL-00002" summary="fist commit">
-      <created>1608392051379</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1608392051379</updated>
-    </task>
-    <task id="LOCAL-00003" summary="angular project">
-      <created>1608392687538</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1608392687538</updated>
-    </task>
-    <task id="LOCAL-00004" summary="deployment-tests">
-      <created>1609089685345</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1609089685345</updated>
-    </task>
-    <task id="LOCAL-00005" summary="deployment-tests">
-      <created>1609094135268</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1609094135268</updated>
-    </task>
-    <task id="LOCAL-00006" summary="deployment-tests">
-      <created>1609094415037</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1609094415037</updated>
     </task>
     <task id="LOCAL-00007" summary="deployment-tests">
       <created>1609095053942</created>
@@ -254,7 +209,273 @@
       <option name="project" value="LOCAL" />
       <updated>1609105525023</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="e2e-tests">
+      <created>1609320550431</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609320550431</updated>
+    </task>
+    <task id="LOCAL-00019" summary="e2e-tests">
+      <created>1609323579475</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1609323579475</updated>
+    </task>
+    <task id="LOCAL-00020" summary="e2e-tests">
+      <created>1609323623810</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609323623810</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix tests">
+      <created>1609324173933</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1609324173933</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fix tests">
+      <created>1609341490300</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1609341490300</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fix tests">
+      <created>1609342073393</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1609342073393</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix tests">
+      <created>1609342491699</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1609342491699</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fix tests">
+      <created>1609342848590</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1609342848590</updated>
+    </task>
+    <task id="LOCAL-00026" summary="fix tests">
+      <created>1609343491827</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1609343491827</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fix tests">
+      <created>1609343678662</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1609343678662</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fix tests">
+      <created>1609344408893</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1609344408893</updated>
+    </task>
+    <task id="LOCAL-00029" summary="fix tests">
+      <created>1609344962675</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1609344962675</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fix tests">
+      <created>1609345492191</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1609345492191</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fix tests">
+      <created>1609346388411</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1609346388411</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fix tests">
+      <created>1609346867747</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1609346867747</updated>
+    </task>
+    <task id="LOCAL-00033" summary="fix tests">
+      <created>1609347051973</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1609347051973</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fix tests">
+      <created>1609347511384</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1609347511384</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix tests">
+      <created>1609347878117</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1609347878117</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fix tests">
+      <created>1609347982138</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1609347982138</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fix tests">
+      <created>1609351426049</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1609351426049</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fix tests">
+      <created>1609352888601</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1609352888601</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fix tests">
+      <created>1609354865338</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1609354865338</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fix tests">
+      <created>1609355217614</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1609355217614</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fix tests">
+      <created>1609356368841</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1609356368841</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fix tests">
+      <created>1609356614759</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1609356614759</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix tests">
+      <created>1609357995664</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1609357995664</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fix tests">
+      <created>1609358113963</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1609358113963</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fix tests">
+      <created>1609358357973</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1609358357973</updated>
+    </task>
+    <task id="LOCAL-00046" summary="fix tests">
+      <created>1609359161836</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1609359161836</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fix tests">
+      <created>1609359330274</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1609359330274</updated>
+    </task>
+    <task id="LOCAL-00048" summary="fix tests">
+      <created>1609359549353</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1609359549353</updated>
+    </task>
+    <task id="LOCAL-00049" summary="fix tests">
+      <created>1609359863451</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1609359863451</updated>
+    </task>
+    <task id="LOCAL-00050" summary="fix tests">
+      <created>1609363292468</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1609363292470</updated>
+    </task>
+    <task id="LOCAL-00051" summary="fix tests">
+      <created>1609363488828</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1609363488828</updated>
+    </task>
+    <task id="LOCAL-00052" summary="fix tests">
+      <created>1609363683606</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1609363683606</updated>
+    </task>
+    <task id="LOCAL-00053" summary="fix tests">
+      <created>1609363782616</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1609363782616</updated>
+    </task>
+    <task id="LOCAL-00054" summary="fix tests">
+      <created>1609364011631</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1609364011631</updated>
+    </task>
+    <task id="LOCAL-00055" summary="fix tests">
+      <created>1609364060972</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1609364060972</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,12 +486,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -282,6 +504,8 @@
     <MESSAGE value="angular project" />
     <MESSAGE value="deployment-tests" />
     <MESSAGE value="small changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
+    <MESSAGE value="e2e-tests" />
+    <MESSAGE value="fix tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix tests" />
   </component>
 </project>

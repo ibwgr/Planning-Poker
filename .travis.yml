@@ -1,10 +1,13 @@
-dist: trusty
-sudo: false
+dist: xenial
+sudo: true
 
 
 env:
   global:
-    - MOZ_HEADLESS=1
+#  – DBUS_SESSION_BUS_ADDRESS=/dev/null
+#  – DISPLAY=:99.0
+#  – CHROME_BIN=chromium-browser
+  - MOZ_HEADLESS=1
 
 language: node_js
 node_js:
@@ -12,14 +15,24 @@ node_js:
 
 addons:
   firefox: latest
+  chrome: stable
+
+
 
 cache:
   directories:
     - Poker-Frontend/node_modules
 
 
+before_script:
+  - npm i protractor
+  - ./node_modules/protractor/bin/webdriver-manager update
+
+
 script:
     - cd Poker-Frontend
     - npm install
-#    - npm run lint
+    - ./node_modules/protractor/bin/webdriver-manager update
     - npm run test-headless
+    - npm run e2e-headless
+
