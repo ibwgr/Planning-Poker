@@ -22,7 +22,7 @@ export class TextViewComponent implements OnInit, OnChanges{
     const message = JSON.parse(data);
 
     if (message.type === 'chat-message'){
-      this.messages.unshift(message.user + ' ' + message.text);
+      this.messages.unshift(message.user + ': ' + message.text);
       this.persistMessages("message", this.messages);
     } else if(message.type === 'newRound'){
       this.messages = [];

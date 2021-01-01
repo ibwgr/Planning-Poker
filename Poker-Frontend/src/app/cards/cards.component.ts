@@ -29,16 +29,15 @@ export class CardsComponent implements OnInit {
       const message = JSON.parse(data);
 
       if (message.type === 'newRound'){
-        this.freezeCards = false;
-        this.buttonClicked = false;
-        this.votes = [];
-        this.activeCard = null;
-        this.localStorage.delete("message")
-      } else if (message.type === 'addUser'){
+        this.resetValues();
+      }
+      if (message.type === 'addUser'){
         this.loggedInUsers.push(message.user);
-      } else if (message.type === 'deleteUser'){
+      }
+      if (message.type === 'deleteUser'){
         this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1)
-      } else if (message.type === 'toggleAdmin'){
+      }
+      if (message.type === 'toggleAdmin'){
         this.adminDisabled = !this.adminDisabled;
       }
     });
@@ -49,31 +48,28 @@ export class CardsComponent implements OnInit {
   }
 
   setEstimation(vote: number):void {
-    this.connectionService.connection.next( {
-      user: this.username, type: 'votings', text: vote
-    });
-
+    this.sendToWebsocketServer('votings', vote, this.username)
     this.votes.push(this.username + ":", vote);
     this.buttonClicked = true;
     this.freezeCards = true
   }
 
   newRound():void {
+    this.resetValues();
+    this.sendToWebsocketServer('newRound',"","")
+  }
+
+  private resetValues() {
     this.freezeCards = false;
     this.buttonClicked = false;
-    this.activeCard = null;
     this.votes = [];
+    this.activeCard = null;
     this.resetMessages = [];
-    this.connectionService.connection.next( {
-      type: 'newRound'
-    });
     this.localStorage.delete("message")
   }
 
   enterUser() {
-    this.connectionService.connection.next({
-      type: 'addUser', user: this.username
-    });
+    this.sendToWebsocketServer('addUser',"", this.username)
     this.loggedInUsers.push(this.username);
     this.userEntered = true;
     this.persistUsername("username", this.username)
@@ -85,20 +81,22 @@ export class CardsComponent implements OnInit {
   }
 
   deleteUser() {
-    this.connectionService.connection.next({
-      type: 'deleteUser', user: this.username
-    });
-    this.loggedInUsers.splice(this.loggedInUsers.indexOf(this.username), 1);
+    this.sendToWebsocketServer('deleteUser', "", this.username)
+    this.loggedInUsers.splice(this.loggedInUsers.indexOf(this.username), 1)
     this.username = "";
-    this.persistUsername("username", this.username);
+    this.persistUsername("username", this.username)
     this.userEntered = false;
   }
 
   toggleAdmin() {
-    this.connectionService.connection.next({
-      type: 'toggleAdmin'
-    });
+    this.sendToWebsocketServer('toggleAdmin',"","")
     this.adminChecked = !this.adminChecked;
+  }
+
+  private sendToWebsocketServer(messageType: string, messageContent: any, user: string) {
+    this.connectionService.connection.next({
+      user: user, type: messageType, text: messageContent,
+    });
   }
 
   redCoffee() {
