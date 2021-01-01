@@ -21,6 +21,9 @@ export class CardsComponent implements OnInit {
   activeCard: any;
   adminChecked: boolean = false;
   adminDisabled: boolean = false;
+  hasVoted: any = [];
+  amountOfVotings: number = 0;
+  totalVoters: number = 0;
   imgSrc = "assets/images/coffee.png"
 
 
@@ -28,14 +31,21 @@ export class CardsComponent implements OnInit {
     connectionService.connection.subscribe((data) => {
       const message = JSON.parse(data);
 
+      if (message.type === "votings"){
+        this.hasVoted.push(message.user + " has voted.");
+        this.amountOfVotings ++;
+      }
+
       if (message.type === 'newRound'){
         this.resetValues();
       }
       if (message.type === 'addUser'){
         this.loggedInUsers.push(message.user);
+        this.totalVoters ++;
       }
       if (message.type === 'deleteUser'){
         this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1)
+        this.totalVoters --;
       }
       if (message.type === 'toggleAdmin'){
         this.adminDisabled = !this.adminDisabled;
@@ -65,7 +75,9 @@ export class CardsComponent implements OnInit {
     this.votes = [];
     this.activeCard = null;
     this.resetMessages = [];
-    this.localStorage.delete("message")
+    this.localStorage.delete("message");
+    this.hasVoted = [];
+    this.amountOfVotings = 0;
   }
 
   enterUser() {
