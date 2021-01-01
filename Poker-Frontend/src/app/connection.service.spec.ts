@@ -1,5 +1,7 @@
 import {async, TestBed, tick} from '@angular/core/testing';
 import { ConnectionService } from './connection.service';
+import {browser} from "protractor";
+import {CardsComponent} from "./cards/cards.component";
 
 
 fdescribe('ConnectionService', () => {
@@ -20,17 +22,4 @@ fdescribe('ConnectionService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should check if websocket-server is available', async (() => {
-
-    service.connection.subscribe((data) => {
-      JSON.parse(data).then(()=> {
-        expect(data.text).toBe('ping')
-      })
-    });
-
-
-
-
-
-  }));
 });

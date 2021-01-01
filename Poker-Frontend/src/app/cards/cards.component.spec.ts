@@ -1,12 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CardsComponent } from './cards.component';
 import {LocalStorageService} from "../local-storage.service";
 
-describe('CardsComponent', () => {
+
+fdescribe('CardsComponent', () => {
   let component: CardsComponent;
-  let localStorageService: LocalStorageService = new LocalStorageService()
+  let localStorageService: LocalStorageService = new LocalStorageService();
   let fixture: ComponentFixture<CardsComponent>;
+
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

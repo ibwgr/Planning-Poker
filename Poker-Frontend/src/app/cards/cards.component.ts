@@ -93,7 +93,7 @@ export class CardsComponent implements OnInit {
     this.adminChecked = !this.adminChecked;
   }
 
-  private sendToWebsocketServer(messageType: string, messageContent: any, user: string) {
+  sendToWebsocketServer(messageType: string, messageContent: any, user: string) {
     this.connectionService.connection.next({
       user: user, type: messageType, text: messageContent,
     });
