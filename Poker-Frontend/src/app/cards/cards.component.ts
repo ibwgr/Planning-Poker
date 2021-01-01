@@ -21,7 +21,7 @@ export class CardsComponent implements OnInit {
   activeCard: any;
   adminChecked: boolean = false;
   adminDisabled: boolean = false;
-  imgSrc = "assets/images/coffee.png"
+  imgSrc = "assets/images/coffee.png";
 
 
   constructor(private connectionService: ConnectionService, private localStorage: LocalStorageService) {

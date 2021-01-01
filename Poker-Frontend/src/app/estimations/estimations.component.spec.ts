@@ -16,7 +16,7 @@ describe('EstimationsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EstimationsComponent);
     component = fixture.componentInstance;
-    component.fibonacciMaster = [1, 2, 3, 5, 8, 0]
+    component.fibonacciMaster = [1, 2, 3, 5, 8, 0];
     fixture.detectChanges();
   });
 
