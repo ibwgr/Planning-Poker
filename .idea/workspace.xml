@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Poker-Frontend/src/assets/favicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/connection.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/connection.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/local-storage.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/local-storage.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,22 +62,22 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="15.3.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Poker-Frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Poker-Frontend/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Poker-Frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Poker-Frontend" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Poker-Frontend/src" />
+      <recent name="$PROJECT_DIR$/Poker-Frontend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Poker-Frontend/src/assets" />
+      <recent name="$PROJECT_DIR$/Poker-Frontend/src" />
+      <recent name="$PROJECT_DIR$/Poker-Frontend" />
       <recent name="$PROJECT_DIR$/Poker-Frontend/e2e/src/spec" />
       <recent name="$PROJECT_DIR$/Poker-Frontend/src/assets/images" />
-      <recent name="$PROJECT_DIR$/Poker-Frontend/src/assets" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Poker-Frontend" />
-      <recent name="$PROJECT_DIR$/Poker-Frontend/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -512,6 +513,7 @@
     <MESSAGE value="small changes" />
     <MESSAGE value="e2e-tests" />
     <MESSAGE value="fix tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix tests" />
+    <MESSAGE value="update tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="update tests" />
   </component>
 </project>
