@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-    </list>
+    <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,13 +131,6 @@
       <workItem from="1608563032434" duration="5473000" />
       <workItem from="1608645948150" duration="1267000" />
       <workItem from="1608708271767" duration="12048000" />
-    </task>
-    <task id="LOCAL-00015" summary="deployment-tests">
-      <created>1609101064564</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1609101064564</updated>
     </task>
     <task id="LOCAL-00016" summary="deployment-tests">
       <created>1609102245235</created>
@@ -478,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609610908544</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="sonarqube">
+      <created>1609611179256</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1609611179256</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
