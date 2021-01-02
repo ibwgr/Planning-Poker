@@ -1,6 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EstimationsComponent } from './estimations.component';
+import {CardsComponent} from "../cards/cards.component";
+import {TextViewComponent} from "../text-view/text-view.component";
+import {ErrorComponent} from "../error/error.component";
+import {HeaderComponent} from "../header/header.component";
+import {FooterComponent} from "../footer/footer.component";
+import {MatLabel} from "@angular/material/form-field";
+import {MatSlideToggle} from "@angular/material/slide-toggle";
 
 describe('EstimationsComponent', () => {
   let component: EstimationsComponent;
@@ -10,7 +17,15 @@ describe('EstimationsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EstimationsComponent ]
+      declarations: [
+        EstimationsComponent,
+        CardsComponent,
+        TextViewComponent,
+        ErrorComponent,
+        HeaderComponent,
+        FooterComponent,
+        MatLabel,
+        MatSlideToggle ]
     })
     .compileComponents();
   }));
