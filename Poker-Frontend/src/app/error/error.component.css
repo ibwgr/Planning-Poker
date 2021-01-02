@@ -1,0 +1,9 @@
+.container {
+  background-color: red;
+  height: 30px;
+  padding: 10px;
+}
+
+.error-section {
+  margin-top: 5px;
+}
