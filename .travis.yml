@@ -16,6 +16,9 @@ node_js:
 addons:
   firefox: latest
   chrome: stable
+  sonarcloud:
+    organization: "ibwgr"
+    token: SONAR_TOKEN
 
 
 
@@ -35,4 +38,5 @@ script:
     - ./node_modules/protractor/bin/webdriver-manager update
     - npm run test-headless
     - npm run e2e-headless
+    - sonar-scanner
 
