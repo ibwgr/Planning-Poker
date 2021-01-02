@@ -27,6 +27,7 @@
   cursor: pointer;
 }
 
+
 mat-card:hover {
   color: red;
   border-color: yellow;
@@ -167,3 +168,32 @@ mat-card:hover {
 }
 
 
+@media screen and (max-width: 768px) {
+  .card {
+    width: 65px;
+    height: 95px;
+    margin: 5px;
+    background-size: cover;
+    font-size: 30px;
+  }
+  .cardsContainer {
+    justify-content: left;
+    margin: 20px;
+  }
+  .clicked {
+    height: 60px;
+    padding-top: 55px;
+  }
+  .bottomContent {
+    display: block;
+  }
+  .userView {
+    display: block;
+    margin-bottom: 20px;
+  }
+ .mat-slideToggle{
+    margin-bottom: 20px;
+  }
+ .voteButton {
+ }
+}

@@ -40,18 +40,17 @@ describe("Planning-Poker Frontend tests", ()=> {
     expect(await page.getSubmittedUserLabel()).toEqual('Roberto')
   });
 
-  it('should activate admin-user', async () => {
-    await page.clickAdminToggle();
-    browser.waitForAngular();
-    expect(await page.getNewRoundButtonLabel()).toEqual('New Round')
-
-  });
-
   it('should click on 3rd card and vote-button', async () => {
     await page.clickThirdCard();
     browser.waitForAngular();
     await page.clickVoteButton();
     expect(element(by.css('.mat-button-base.mat-flat-button.mat-primary.ng-star-inserted.voteButton')).getCssValue('background-color')).toBe('rgba(255, 0, 0, 1)')
+  });
+
+  it('should activate admin-user', async () => {
+    await page.clickAdminToggle();
+    browser.waitForAngular();
+    expect(await page.getNewRoundButtonLabel()).toEqual('New Round')
   });
 
   it('should enter and display Acceptance-Criterias', async () => {

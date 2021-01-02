@@ -52,3 +52,18 @@
   vertical-align: middle;
   display: table;
 }
+
+@media screen and (max-width: 768px) {
+  .text-view {
+  width: 700px;
+  }
+  .text-area {
+    width: 650px;
+  }
+  .acceptance-criterias {
+    width: 700px;
+  }
+  .text-input {
+    width: 660px;
+  }
+}

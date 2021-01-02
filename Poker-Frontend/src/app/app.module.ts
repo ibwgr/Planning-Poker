@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardsComponent } from './cards/cards.component';
@@ -18,8 +17,10 @@ import { FooterComponent } from './footer/footer.component';
 import { TextViewComponent } from './text-view/text-view.component';
 import { MatListModule } from '@angular/material/list';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import {MatCheckboxModule} from "@angular/material/checkbox";
-import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { ErrorComponent } from './error/error.component';
+import { NgModule } from "@angular/core";
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     EstimationsComponent,
     HeaderComponent,
     FooterComponent,
-    TextViewComponent
+    TextViewComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

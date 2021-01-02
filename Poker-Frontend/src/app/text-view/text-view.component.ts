@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {ConnectionService} from "../connection.service";
-import {LocalStorageService} from "../local-storage.service";
+import {ConnectionService} from "../services/connection.service";
+import {LocalStorageService} from "../services/local-storage.service";
 
 @Component({
   selector: 'app-text-view',
