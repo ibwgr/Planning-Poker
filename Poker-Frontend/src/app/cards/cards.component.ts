@@ -24,7 +24,7 @@ export class CardsComponent implements OnInit {
   hasVoted: any = [];
   amountOfVotings: number = 0;
   totalVoters: number = 0;
-  imgSrc = "assets/images/coffee.png"
+  imgSrc = "assets/images/coffee.png";
 
 
   constructor(private connectionService: ConnectionService, private localStorage: LocalStorageService ) {

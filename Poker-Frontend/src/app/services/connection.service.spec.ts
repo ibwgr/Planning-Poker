@@ -1,10 +1,8 @@
-import {async, TestBed, tick} from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 import { ConnectionService } from './connection.service';
-import {browser} from "protractor";
-import {CardsComponent} from "../cards/cards.component";
 
 
-fdescribe('ConnectionService', () => {
+describe('ConnectionService', () => {
   let service: ConnectionService;
 
 
@@ -21,5 +19,4 @@ fdescribe('ConnectionService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-
 });
