@@ -23,14 +23,14 @@
     <div class="userView">
       <label class="currentUser">Current Users:</label>
       <div class="loggedInUsers" *ngFor="let user of loggedInUsers">
-        <label class="singleUser">{{user}}</label>
+        <label >{{user}}</label>
       </div>
     </div>
 
   </div>
   </div>
 
-  <div class="cardsContainer">
+  <div *ngIf="!adminChecked" class="cardsContainer">
     <div class="cards" [class.freezeCards]="freezeCards" *ngFor="let pokerCard of fibonacciMaster, let i = index">
       <mat-card class="card" *ngIf="pokerCard !=0; else coffeCard" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard" ><label>{{pokerCard}}</label></mat-card>
       <button mat-flat-button color="primary" *ngIf="activeCard === pokerCard && pokerCard != 0" class="voteButton" (click)="setEstimation(pokerCard)" [class.buttonClicked]="buttonClicked" >Vote now for {{pokerCard}} SP!</button>
@@ -41,7 +41,15 @@
     </div>
   </div>
 
-</div>
+  <div class="voterView" *ngIf="adminChecked">
+    <div class="whoHasVoted">
+      <label class="amountOfVotes">{{amountOfVotings}} of {{totalVoters}} Users have voted.</label>
+      <div class="loggedInVoter" *ngFor="let user of hasVoted">
+        <label class="singleUser">{{user}}</label>
+    </div>
+  </div>
+
+  </div>
 
 <div class="bottomContent">
   <app-text-view [username]="username" [resetMessages]="resetMessages" [adminChecked]="adminChecked"></app-text-view>
