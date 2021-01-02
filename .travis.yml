@@ -25,7 +25,7 @@ addons:
 cache:
   directories:
     - Poker-Frontend/node_modules
-  - '$HOME/.sonar/cache'
+
 
 before_script:
   - npm i protractor
