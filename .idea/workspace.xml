@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/sonar-project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sonar-project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,16 +64,16 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Poker-Frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Poker-Frontend" />
+      <recent name="$PROJECT_DIR$/Poker-Frontend/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Poker-Frontend" />
       <recent name="$PROJECT_DIR$/Poker-Frontend/src" />
       <recent name="$PROJECT_DIR$/Poker-Frontend/e2e/src/spec" />
       <recent name="$PROJECT_DIR$/Poker-Frontend/src/assets/images" />
-      <recent name="$PROJECT_DIR$/Poker-Frontend/src/assets" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Poker-Frontend" />
-      <recent name="$PROJECT_DIR$/Poker-Frontend/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -133,20 +134,6 @@
       <workItem from="1608563032434" duration="5473000" />
       <workItem from="1608645948150" duration="1267000" />
       <workItem from="1608708271767" duration="12048000" />
-    </task>
-    <task id="LOCAL-00013" summary="deployment-tests">
-      <created>1609100237943</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1609100237943</updated>
-    </task>
-    <task id="LOCAL-00014" summary="deployment-tests">
-      <created>1609100347864</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1609100347864</updated>
     </task>
     <task id="LOCAL-00015" summary="deployment-tests">
       <created>1609101064564</created>
@@ -477,7 +464,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609610320810</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="sonarqube">
+      <created>1609610687379</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1609610687379</updated>
+    </task>
+    <task id="LOCAL-00063" summary="sonarqube">
+      <created>1609610908544</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1609610908544</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
