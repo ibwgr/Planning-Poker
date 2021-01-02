@@ -115,6 +115,10 @@ mat-card:hover {
   margin-right: 20px;
   margin-top: 10px;
 }
+.amountOfVotes {
+  margin-right: 20px;
+  margin-top: 10px;
+}
 
 .userView {
   color: white;
@@ -123,7 +127,21 @@ mat-card:hover {
   font-size: medium;
 }
 
+.voterView {
+  margin-left: 20px;
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  font-family: "TheSans Swisscom", serif;
+  font-size: medium;
+}
+
 .loggedInUsers {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.loggedInVoter {
   margin-right: 10px;
   margin-top: 10px;
 }
