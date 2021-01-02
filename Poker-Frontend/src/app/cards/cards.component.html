@@ -32,7 +32,7 @@
 
   <div *ngIf="!adminChecked" class="cardsContainer">
     <div class="cards" [class.freezeCards]="freezeCards" *ngFor="let pokerCard of fibonacciMaster, let i = index">
-      <mat-card class="card" *ngIf="pokerCard !=0; else coffeCard" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard" ><label>{{pokerCard}}</label></mat-card>
+      <mat-card class="card" *ngIf="pokerCard !=0; else coffeCard" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard" ><label class="cardNumber">{{pokerCard}}</label></mat-card>
       <button mat-flat-button color="primary" *ngIf="activeCard === pokerCard && pokerCard != 0" class="voteButton" (click)="setEstimation(pokerCard)" [class.buttonClicked]="buttonClicked" >Vote now for {{pokerCard}} SP!</button>
       <ng-template #coffeCard>
         <mat-card class="card" (mouseover)="redCoffee()" (mouseout)="blackCoffee()" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard"><img style="height: 40px" [src]="imgSrc"></mat-card>

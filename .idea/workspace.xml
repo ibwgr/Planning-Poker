@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/e2e/src/app.po.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/e2e/src/app.po.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/e2e/src/spec/poker-frontend.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/e2e/src/spec/poker-frontend.e2e.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/services/connection.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/services/connection.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,13 +139,6 @@
       <workItem from="1608563032434" duration="5473000" />
       <workItem from="1608645948150" duration="1267000" />
       <workItem from="1608708271767" duration="12048000" />
-    </task>
-    <task id="LOCAL-00009" summary="deployment-tests">
-      <created>1609096080301</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1609096080301</updated>
     </task>
     <task id="LOCAL-00010" summary="deployment-tests">
       <created>1609096586158</created>
@@ -479,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609594790034</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="fix e2e-tests">
+      <created>1609595615046</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1609595615046</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,6 +516,7 @@
     <MESSAGE value="fix tests" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into roberto-updates&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Poker-Frontend/src/app/cards/cards.component.ts" />
     <MESSAGE value="small fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fixes" />
+    <MESSAGE value="fix e2e-tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix e2e-tests" />
   </component>
 </project>

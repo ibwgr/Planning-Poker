@@ -46,3 +46,9 @@
   height: 40px;
   margin-top: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .average {
+    margin-left: 20px;
+  }
+}
