@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/e2e/src/spec/poker-frontend.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/e2e/src/spec/poker-frontend.e2e.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/tslint.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,13 +133,6 @@
       <workItem from="1608563032434" duration="5473000" />
       <workItem from="1608645948150" duration="1267000" />
       <workItem from="1608708271767" duration="12048000" />
-    </task>
-    <task id="LOCAL-00019" summary="e2e-tests">
-      <created>1609323579475</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1609323579475</updated>
     </task>
     <task id="LOCAL-00020" summary="e2e-tests">
       <created>1609323623810</created>
@@ -480,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609628962338</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="fix-tests">
+      <created>1609629784650</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1609629784650</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

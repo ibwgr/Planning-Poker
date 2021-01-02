@@ -10,7 +10,7 @@ import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core'
 import {FormsModule} from "@angular/forms";
 
 
-describe('CardsComponent', () => {
+fdescribe('CardsComponent', () => {
   let component: CardsComponent;
   let localStorageService: LocalStorageService = new LocalStorageService();
   let fixture: ComponentFixture<CardsComponent>;
@@ -47,9 +47,6 @@ describe('CardsComponent', () => {
     const user = "Roberto";
     component.persistUsername(type, user);
     expect(localStorageService.get("username")).toBe("Roberto")
-  });
-
-  it('should delete username from localstorage', () => {
     component.deleteUser();
     expect(localStorageService.get("username")).toBe('');
   });
