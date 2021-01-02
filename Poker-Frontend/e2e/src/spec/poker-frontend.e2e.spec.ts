@@ -1,4 +1,4 @@
-import {browser, by, element, ElementFinder, protractor} from "protractor";
+import {browser, by, element, protractor} from "protractor";
 import {AppPage} from "../app.po";
 
 
