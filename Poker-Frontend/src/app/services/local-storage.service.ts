@@ -21,7 +21,7 @@ export class LocalStorageService {
   }
 
 
-  set(key: string, value: any):boolean {
+  set(key: string, value: any): boolean {
 
     if (this.isLocalStorageSupported){
       this.localStorage.setItem(key, JSON.stringify(value));
@@ -30,7 +30,7 @@ export class LocalStorageService {
     return false;
   }
 
-  delete(key: string):any {
+  delete(key: string): any {
     if (this.isLocalStorageSupported){
       this.localStorage.removeItem(key)
     }

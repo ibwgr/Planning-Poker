@@ -1,5 +1,5 @@
 import {browser, by, element} from 'protractor';
-import {BrowserUtils} from "./spec/BrowserUtils";
+import {BrowserUtils} from './spec/BrowserUtils';
 
 
 const submittUserButtonLabel = by.css('.buttons [color=\'base\']:nth-of-type(1) .mat-button-wrapper');
@@ -48,54 +48,54 @@ export class AppPage {
     return label.getText()
   }
 
-  async clickSubmitUserButton(){
+  async clickSubmitUserButton(): Promise<any>{
     const button = await element(userButton);
     return button.click()
   }
 
-  async getSubmittedUserLabel(){
+  async getSubmittedUserLabel(): Promise<string> {
     const label = element(submittedUserLabel);
     await BrowserUtils.waitForElement(label);
     return label.getText()
   }
 
-  async clickAdminToggle(){
+  async clickAdminToggle(): Promise<any> {
     const toggle = element(adminToggle);
     await BrowserUtils.waitForElement(toggle);
     return toggle.click()
   }
 
-  async getNewRoundButtonLabel(){
+  async getNewRoundButtonLabel(): Promise<string> {
     const label = element(newRoundButtonLabel);
     await BrowserUtils.waitForElement(label);
     return label.getText()
   }
 
-  async clickThirdCard(){
+  async clickThirdCard(): Promise<any>{
     const card = element(thirdCard);
     await BrowserUtils.waitForElement(card);
     return card.click()
   }
 
-  async clickVoteButton(){
+  async clickVoteButton(): Promise<any>{
     const button = element(submitVoteButton);
     await BrowserUtils.waitForElement(button);
     return button.click()
   }
 
-  async clickShowResultsButton(){
+  async clickShowResultsButton(): Promise<any>{
     const button = element(showResultsButton);
     await BrowserUtils.waitForElement(button);
     return button.click()
   }
 
-  async clickNewRoundButton(){
+  async clickNewRoundButton(): Promise<any>{
     const button = element(newRoundButton);
     await BrowserUtils.waitForElement(button);
     return button.click()
   }
 
-  async clickDeleteUserButton() {
+  async clickDeleteUserButton(): Promise<any> {
     const button = element(deleteUserButton);
     await BrowserUtils.waitForElement(button);
     return button.click()

@@ -41,7 +41,7 @@ export class TextViewComponent implements OnInit, OnChanges{
   }
 
 
-  submitText() {
+  submitText(): void {
     this.connectionService.connection.next( {
        type: 'chat-message', text: this.textcontent, user: this.username
     });
@@ -51,7 +51,7 @@ export class TextViewComponent implements OnInit, OnChanges{
 
   }
 
-  persistMessages(key: string, value: any){
+  persistMessages(key: string, value: any): void{
       this.localStorage.set(key, value)
     }
 }

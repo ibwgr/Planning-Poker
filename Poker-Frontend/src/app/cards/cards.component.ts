@@ -71,7 +71,7 @@ export class CardsComponent implements OnInit {
     this.sendToWebsocketServer('newRound',"","")
   }
 
-  private resetValues() {
+  private resetValues(): void {
     this.freezeCards = false;
     this.buttonClicked = false;
     this.votes = [];
@@ -82,7 +82,7 @@ export class CardsComponent implements OnInit {
     this.amountOfVotings = 0;
   }
 
-  enterUser() {
+  enterUser(): void {
     this.sendToWebsocketServer('addUser',"", this.username);
     this.loggedInUsers.push(this.username);
     this.userEntered = true;
@@ -90,11 +90,11 @@ export class CardsComponent implements OnInit {
   }
 
 
-  persistUsername(key: string, value: any){
+  persistUsername(key: string, value: any): void{
     this.localStorage.set(key, value)
   }
 
-  deleteUser() {
+  deleteUser(): void {
     this.sendToWebsocketServer('deleteUser', "", this.username);
     this.loggedInUsers.splice(this.loggedInUsers.indexOf(this.username), 1);
     this.username = "";
@@ -102,26 +102,26 @@ export class CardsComponent implements OnInit {
     this.userEntered = false;
   }
 
-  toggleAdmin() {
+  toggleAdmin(): void {
     this.sendToWebsocketServer('toggleAdmin',"","");
     this.adminChecked = !this.adminChecked;
   }
 
-  private sendToWebsocketServer(messageType: string, messageContent: any, user: string) {
+  private sendToWebsocketServer(messageType: string, messageContent: any, user: string): void {
     this.connectionService.connection.next({
       user: user, type: messageType, text: messageContent,
     });
   }
 
-  redCoffee() {
+  redCoffee(): void {
     this.imgSrc = "assets/images/redcoffee.png"
   }
 
-  blackCoffee() {
+  blackCoffee(): void {
     this.imgSrc = "assets/images/coffee.png"
   }
 
-  showErrorMessage(){
+  showErrorMessage(): string{
   return this.errorMessage = 'WebSocketServer is not available, please contact your administrator!!'
   }
 

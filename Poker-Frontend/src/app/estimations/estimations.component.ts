@@ -53,7 +53,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
     this.resetEstimations()
   }
 
-  private resetEstimations() {
+  private resetEstimations(): void {
     this.averageEstimation = null;
     this.highestEstimation = null;
     this.lowestEstimation = null;
@@ -89,36 +89,36 @@ export class EstimationsComponent implements OnInit, OnChanges {
     });
   }
 
-  removeZeros() {
+  removeZeros(): any {
     return value => {
       return value > 0
     };
   }
 
-   calcAverage(estimations){
+   calcAverage(estimations): number{
     const average = this.calcSum(estimations) / estimations.length;
     let nextFibonacci = 0;
 
     this.fibonacciMaster.forEach((fibonacci) => {
-      if(average <= fibonacci && nextFibonacci == 0){
+      if(average <= fibonacci && nextFibonacci === 0){
         nextFibonacci = fibonacci;
       }
     });
     return nextFibonacci;
   }
 
-   calcSum(estimations) {
+   calcSum(estimations): number {
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     return estimations.reduce(reducer, 0);
   }
 
-  private sendToWebsocketServer(messageType: string, messageContent: any) {
+  private sendToWebsocketServer(messageType: string, messageContent: any): void {
     this.connectionService.connection.next({
       type: messageType, text: messageContent,
     });
   }
 
-  private showEstimation(votes){
+  private showEstimation(votes): void{
     this.allEstimations = votes;
   }
 }
