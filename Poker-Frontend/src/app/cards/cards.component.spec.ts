@@ -1,6 +1,13 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { CardsComponent } from './cards.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {CardsComponent} from './cards.component';
 import {LocalStorageService} from "../services/local-storage.service";
+import {EstimationsComponent} from "../estimations/estimations.component";
+import {TextViewComponent} from "../text-view/text-view.component";
+import {ErrorComponent} from "../error/error.component";
+import {HeaderComponent} from "../header/header.component";
+import {FooterComponent} from "../footer/footer.component";
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core'
+import {FormsModule} from "@angular/forms";
 
 
 describe('CardsComponent', () => {
@@ -11,7 +18,20 @@ describe('CardsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardsComponent ]
+      declarations: [
+        CardsComponent,
+        TextViewComponent,
+        EstimationsComponent,
+        ErrorComponent,
+        HeaderComponent,
+        FooterComponent
+      ],
+      schemas:[
+        CUSTOM_ELEMENTS_SCHEMA
+      ],
+      imports: [
+        FormsModule
+      ]
     })
     .compileComponents();
   }));
@@ -26,10 +46,7 @@ describe('CardsComponent', () => {
     const type = "username";
     const user = "Roberto";
     component.persistUsername(type, user);
-    expect(localStorageService.get("username")).toBe("Roberto")
-  });
-
-  it('should delete username from localstorage', () => {
+    expect(localStorageService.get("username")).toBe("Roberto");
     component.deleteUser();
     expect(localStorageService.get("username")).toBe('');
   });

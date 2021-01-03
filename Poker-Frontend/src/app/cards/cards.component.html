@@ -35,7 +35,7 @@
       <mat-card class="card" *ngIf="pokerCard !=0; else coffeCard" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard" ><label class="cardNumber">{{pokerCard}}</label></mat-card>
       <button mat-flat-button color="primary" *ngIf="activeCard === pokerCard && pokerCard != 0" class="voteButton" (click)="setEstimation(pokerCard)" [class.buttonClicked]="buttonClicked" >Vote now for {{pokerCard}} SP!</button>
       <ng-template #coffeCard>
-        <mat-card class="card" (mouseover)="redCoffee()" (mouseout)="blackCoffee()" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard"><img style="height: 40px" [src]="imgSrc"></mat-card>
+        <mat-card class="card" (mouseover)="redCoffee()" (mouseout)="blackCoffee()" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard"><img style="height: 40px" [src]="imgSrc" alt="coffee-image"></mat-card>
         <button mat-flat-button color="primary" *ngIf="activeCard === 0" class="voteButton" (click)="setEstimation(0)" [class.buttonClicked]="buttonClicked">Vote now for no estimation!</button>
       </ng-template>
     </div>
@@ -56,7 +56,4 @@
   <app-estimations [votes]="votes" [fibonacciMaster]="fibonacciMaster" [adminChecked]="adminChecked"></app-estimations>
 </div>
 </div>
-
-
-
-
+</div>

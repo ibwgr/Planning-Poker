@@ -1,3 +1,4 @@
+import { ErrorHandler, NgModule} from "@angular/core";
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +11,6 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FooterComponent } from './footer/footer.component';
@@ -20,7 +20,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { ErrorComponent } from './error/error.component';
-import { NgModule } from "@angular/core";
+import { MatFormFieldModule } from "@angular/material/form-field";
+
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { NgModule } from "@angular/core";
     HeaderComponent,
     FooterComponent,
     TextViewComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,15 +43,15 @@ import { NgModule } from "@angular/core";
     FormsModule,
     MatIconModule,
     MatToolbarModule,
-    MatFormFieldModule,
     MatInputModule,
     MatAutocompleteModule,
     MatListModule,
     ScrollingModule,
     MatCheckboxModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatFormFieldModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ErrorHandler],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
