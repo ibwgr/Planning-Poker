@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
 import {ConnectionService} from '../services/connection.service';
 import {LocalStorageService} from "../services/local-storage.service";
 
@@ -35,17 +35,17 @@ export class CardsComponent implements OnInit {
         this.hasVoted.push(message.user + " has voted.");
         this.amountOfVotings ++;
       }
-
       if (message.type === 'newRound'){
         this.resetValues();
       }
+      if (message.type === 'updateUser'){
+        this.loggedInUsers = message.text;
+      }
       if (message.type === 'addUser'){
-        this.loggedInUsers.push(message.user);
-        this.totalVoters ++;
+        this.addUserForAll(message);
       }
       if (message.type === 'deleteUser'){
-        this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1);
-        this.totalVoters --;
+        this.deleteUserForAll(message);
       }
       if (message.type === 'toggleAdmin'){
         this.adminDisabled = !this.adminDisabled;
@@ -53,6 +53,26 @@ export class CardsComponent implements OnInit {
     }, () => {
       this.showErrorMessage()
     });
+  }
+
+  private deleteUserForAll(message) {
+    if(this.adminChecked) {
+      this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1);
+      this.totalVoters--;
+      this.sendAdminsUserList()
+    }
+  }
+
+  private addUserForAll(message) {
+    if(this.adminChecked) {
+      this.loggedInUsers.push(message.user);
+      this.totalVoters++;
+      this.sendAdminsUserList();
+    }
+  }
+
+  private sendAdminsUserList() {
+    this.sendToWebsocketServer('updateUser', this.loggedInUsers, "")
   }
 
   ngOnInit(): void {
@@ -84,9 +104,12 @@ export class CardsComponent implements OnInit {
 
   enterUser(): void {
     this.sendToWebsocketServer('addUser',"", this.username);
-    this.loggedInUsers.push(this.username);
     this.userEntered = true;
     this.persistUsername("username", this.username)
+    if(this.adminChecked){
+      this.loggedInUsers.push(this.username);
+      this.sendAdminsUserList()
+    }
   }
 
 

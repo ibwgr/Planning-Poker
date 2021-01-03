@@ -124,7 +124,7 @@ mat-card:hover {
 .userView {
   color: white;
   display: flex;
-  font-family: "TheSans Swisscom", serif;
+  font-family: "TheSans Swisscom", Roboto, "Helvetica Neue", serif;
   font-size: medium;
 }
 
@@ -133,7 +133,7 @@ mat-card:hover {
   margin-top: 20px;
   color: white;
   display: flex;
-  font-family: "TheSans Swisscom", serif;
+  font-family: "TheSans Swisscom", Roboto, "Helvetica Neue", serif;
   font-size: medium;
 }
 

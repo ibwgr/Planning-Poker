@@ -16,12 +16,12 @@
   </div>
 
   <div class="buttons">
-    <button mat-raised-button color="base" class="enterUsername" (click)="enterUser()" [class.invisible]="userEntered">Submit Username</button>
-    <button mat-raised-button color="base" class="enterUsername" (click)="deleteUser()" [class.invisible]="!userEntered">Delete Username</button>
+    <button mat-raised-button color="base" *ngIf="adminDisabled || adminChecked" class="enterUsername" (click)="enterUser()" [class.invisible]="userEntered">Submit Username</button>
+    <button mat-raised-button color="base" *ngIf="adminDisabled || adminChecked" class="enterUsername" (click)="deleteUser()" [class.invisible]="!userEntered">Delete Username</button>
   <button mat-raised-button color="base"  *ngIf="adminChecked" (click)="newRound()" class="newRound">New Round</button>
 
     <div class="userView">
-      <label class="currentUser">Current Users:</label>
+      <label class="currentUser" *ngIf="loggedInUsers.length">Current Users:</label>
       <div class="loggedInUsers" *ngFor="let user of loggedInUsers">
         <label >{{user}}</label>
       </div>
