@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ConnectionService} from '../services/connection.service';
 import {LocalStorageService} from "../services/local-storage.service";
 
@@ -47,8 +47,11 @@ export class CardsComponent implements OnInit {
       if (message.type === 'deleteUser'){
         this.deleteUserForAll(message);
       }
-      if (message.type === 'toggleAdmin'){
-        this.adminDisabled = !this.adminDisabled;
+      if (message.type === 'sendUserListToAdmin'){
+        this.sendToWebsocketServer('myUserListToAdmin', this.loggedInUsers, "")
+      }
+      if (message.type === 'myUserListToAdmin'){
+        this.generateAdminsUserlist(message.text)
       }
     }, () => {
       this.showErrorMessage()
@@ -56,22 +59,22 @@ export class CardsComponent implements OnInit {
   }
 
   private deleteUserForAll(message) {
+    this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1);
+    this.totalVoters--;
     if(this.adminChecked) {
-      this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1);
-      this.totalVoters--;
-      this.sendAdminsUserList()
+      this.sendAdminsUserListToAll()
     }
   }
 
   private addUserForAll(message) {
+    this.loggedInUsers.push(message.user);
+    this.totalVoters++;
     if(this.adminChecked) {
-      this.loggedInUsers.push(message.user);
-      this.totalVoters++;
-      this.sendAdminsUserList();
+      this.sendAdminsUserListToAll();
     }
   }
 
-  private sendAdminsUserList() {
+  private sendAdminsUserListToAll() {
     this.sendToWebsocketServer('updateUser', this.loggedInUsers, "")
   }
 
@@ -106,10 +109,7 @@ export class CardsComponent implements OnInit {
     this.sendToWebsocketServer('addUser',"", this.username);
     this.userEntered = true;
     this.persistUsername("username", this.username)
-    if(this.adminChecked){
-      this.loggedInUsers.push(this.username);
-      this.sendAdminsUserList()
-    }
+    this.loggedInUsers.unshift(this.username);
   }
 
 
@@ -126,8 +126,8 @@ export class CardsComponent implements OnInit {
   }
 
   toggleAdmin(): void {
-    this.sendToWebsocketServer('toggleAdmin',"","");
     this.adminChecked = !this.adminChecked;
+    this.sendToWebsocketServer('sendUserListToAdmin', "", this.username);
   }
 
   private sendToWebsocketServer(messageType: string, messageContent: any, user: string): void {
@@ -148,4 +148,17 @@ export class CardsComponent implements OnInit {
   return this.errorMessage = 'WebSocketServer is not available, please contact your administrator!!'
   }
 
+  private generateAdminsUserlist(userList) {
+    if(this.adminChecked){
+      this.concatUserList(userList)
+      this.sendAdminsUserListToAll();
+      this.totalVoters = this.loggedInUsers.length - 1;
+    }
+  }
+
+  private concatUserList(userList) {
+    let concatenatedUserList = [...this.loggedInUsers, ...userList];
+    let userListSet = new Set(concatenatedUserList);
+    this.loggedInUsers = Array.from(userListSet);
+  }
 }
