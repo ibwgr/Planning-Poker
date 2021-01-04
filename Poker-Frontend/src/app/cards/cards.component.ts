@@ -31,21 +31,14 @@ export class CardsComponent implements OnInit {
     connectionService.connection.subscribe((data) => {
       const message = JSON.parse(data);
 
-      if (message.type === "votings"){
-        this.hasVoted.push(message.user + " has voted.");
-        this.amountOfVotings ++;
-      }
-      if (message.type === 'newRound'){
-        this.resetValues();
-      }
-      if (message.type === 'updateUser'){
-        this.loggedInUsers = message.text;
-      }
       if (message.type === 'addUser'){
         this.addUserForAll(message);
       }
       if (message.type === 'deleteUser'){
         this.deleteUserForAll(message);
+      }
+      if (message.type === 'updateUser'){
+        this.loggedInUsers = message.text;
       }
       if (message.type === 'sendUserListToAdmin'){
         this.sendToWebsocketServer('myUserListToAdmin', this.loggedInUsers, "")
@@ -53,17 +46,39 @@ export class CardsComponent implements OnInit {
       if (message.type === 'myUserListToAdmin'){
         this.generateAdminsUserlist(message.text)
       }
+      if (message.type === "votings"){
+        this.hasVoted.push(message.user + " has voted.");
+        this.amountOfVotings ++;
+      }
+      if (message.type === 'newRound'){
+        this.resetValues();
+      }
     }, () => {
       this.showErrorMessage()
     });
   }
 
-  private deleteUserForAll(message) {
-    this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1);
-    this.totalVoters--;
-    if(this.adminChecked) {
-      this.sendAdminsUserListToAll()
-    }
+  ngOnInit(): void {
+    this.username = this.localStorage.get("username");
+  }
+
+  enterUser(): void {
+    this.sendToWebsocketServer('addUser',"", this.username);
+    this.userEntered = true;
+    this.persistUsername("username", this.username);
+    this.loggedInUsers.unshift(this.username);
+  }
+
+  persistUsername(key: string, value: any): void{
+    this.localStorage.set(key, value)
+  }
+
+  deleteUser(): void {
+    this.sendToWebsocketServer('deleteUser', "", this.username);
+    this.loggedInUsers.splice(this.loggedInUsers.indexOf(this.username), 1);
+    this.username = "";
+    this.persistUsername("username", this.username);
+    this.userEntered = false;
   }
 
   private addUserForAll(message) {
@@ -74,12 +89,35 @@ export class CardsComponent implements OnInit {
     }
   }
 
+  private deleteUserForAll(message) {
+    this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1);
+    this.totalVoters--;
+    if(this.adminChecked) {
+      this.sendAdminsUserListToAll()
+    }
+  }
+
   private sendAdminsUserListToAll() {
     this.sendToWebsocketServer('updateUser', this.loggedInUsers, "")
   }
 
-  ngOnInit(): void {
-    this.username = this.localStorage.get("username");
+  toggleAdmin(): void {
+    this.adminChecked = !this.adminChecked;
+    this.sendToWebsocketServer('sendUserListToAdmin', "", this.username);
+  }
+
+  private generateAdminsUserlist(userList) {
+    if(this.adminChecked){
+      this.concatUserList(userList);
+      this.sendAdminsUserListToAll();
+      this.totalVoters = this.loggedInUsers.length - 1;
+    }
+  }
+
+  private concatUserList(userList) {
+    let concatenatedUserList = [...this.loggedInUsers, ...userList];
+    let userListSet = new Set(concatenatedUserList);
+    this.loggedInUsers = Array.from(userListSet);
   }
 
   setEstimation(vote: number):void {
@@ -105,31 +143,6 @@ export class CardsComponent implements OnInit {
     this.amountOfVotings = 0;
   }
 
-  enterUser(): void {
-    this.sendToWebsocketServer('addUser',"", this.username);
-    this.userEntered = true;
-    this.persistUsername("username", this.username)
-    this.loggedInUsers.unshift(this.username);
-  }
-
-
-  persistUsername(key: string, value: any): void{
-    this.localStorage.set(key, value)
-  }
-
-  deleteUser(): void {
-    this.sendToWebsocketServer('deleteUser', "", this.username);
-    this.loggedInUsers.splice(this.loggedInUsers.indexOf(this.username), 1);
-    this.username = "";
-    this.persistUsername("username", this.username);
-    this.userEntered = false;
-  }
-
-  toggleAdmin(): void {
-    this.adminChecked = !this.adminChecked;
-    this.sendToWebsocketServer('sendUserListToAdmin', "", this.username);
-  }
-
   private sendToWebsocketServer(messageType: string, messageContent: any, user: string): void {
     this.connectionService.connection.next({
       user: user, type: messageType, text: messageContent,
@@ -148,17 +161,4 @@ export class CardsComponent implements OnInit {
   return this.errorMessage = 'WebSocketServer is not available, please contact your administrator!!'
   }
 
-  private generateAdminsUserlist(userList) {
-    if(this.adminChecked){
-      this.concatUserList(userList)
-      this.sendAdminsUserListToAll();
-      this.totalVoters = this.loggedInUsers.length - 1;
-    }
-  }
-
-  private concatUserList(userList) {
-    let concatenatedUserList = [...this.loggedInUsers, ...userList];
-    let userListSet = new Set(concatenatedUserList);
-    this.loggedInUsers = Array.from(userListSet);
-  }
 }

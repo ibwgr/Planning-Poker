@@ -12,7 +12,6 @@ export class TextViewComponent implements OnInit, OnChanges{
 
   @Input() username: string;
   @Input() resetMessages;
-  @Input() adminChecked;
   messages: any = [];
   textcontent: string;
 

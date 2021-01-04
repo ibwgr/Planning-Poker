@@ -4,9 +4,6 @@ sudo: true
 
 env:
   global:
-#  – DBUS_SESSION_BUS_ADDRESS=/dev/null
-#  – DISPLAY=:99.0
-#  – CHROME_BIN=chromium-browser
   - MOZ_HEADLESS=1
 
 language: node_js
