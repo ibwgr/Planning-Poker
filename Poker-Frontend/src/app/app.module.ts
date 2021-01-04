@@ -19,7 +19,6 @@ import { MatListModule } from '@angular/material/list';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
-import { ErrorComponent } from './error/error.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
 
 
@@ -31,8 +30,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     EstimationsComponent,
     HeaderComponent,
     FooterComponent,
-    TextViewComponent,
-    ErrorComponent,
+    TextViewComponent
+
   ],
   imports: [
     BrowserModule,

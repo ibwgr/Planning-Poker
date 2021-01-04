@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/error/error.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/error/error.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/error/error.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/error/error.component.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +61,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="15.3.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.14" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Poker-Frontend" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/Poker-Frontend/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Poker-Frontend/node_modules/typescript/lib" />
@@ -79,45 +84,19 @@
       <recent name="$PROJECT_DIR$/Poker-Frontend/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Protractor.CardsComponent">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardsComponent" type="JavaScriptTestRunnerProtractor" temporary="true" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/Poker-Frontend/protractor-conf.js" />
-      <node-interpreter value="project" />
-      <protractor-package value="$PROJECT_DIR$/Poker-Frontend/node_modules/protractor" />
-      <protractor-options value="" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.spec.ts" />
-      <test-names>
-        <test-name value="CardsComponent" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="CardsComponent.should store new user in localstorage" type="JavaScriptTestRunnerProtractor" temporary="true" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/Poker-Frontend/protractor-conf.js" />
-      <node-interpreter value="project" />
-      <protractor-package value="$PROJECT_DIR$/Poker-Frontend/node_modules/protractor" />
-      <protractor-options value="" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.spec.ts" />
-      <test-names>
-        <test-name value="CardsComponent" />
-        <test-name value="should store new user in localstorage" />
-      </test-names>
-      <method v="2" />
-    </configuration>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="E2E Tests (Planning-Poker-Frontend)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/Planning-Poker-Frontend/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -134,20 +113,6 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
-    <configuration name="EstimationsComponent.should calculate right average" type="JavaScriptTestRunnerProtractor" temporary="true" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/Poker-Frontend/protractor-conf.js" />
-      <node-interpreter value="project" />
-      <protractor-package value="$PROJECT_DIR$/Poker-Frontend/node_modules/protractor" />
-      <protractor-options value="" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.spec.ts" />
-      <test-names>
-        <test-name value="EstimationsComponent" />
-        <test-name value="should calculate right average" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -161,15 +126,8 @@
       <envs />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Protractor.CardsComponent" />
-        <item itemvalue="Protractor.EstimationsComponent.should calculate right average" />
-        <item itemvalue="Protractor.CardsComponent.should store new user in localstorage" />
-      </list>
-    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -539,12 +497,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -566,25 +525,5 @@
     <MESSAGE value="sonar-fix" />
     <MESSAGE value="fix-tests" />
     <option name="LAST_COMMIT_MESSAGE" value="fix-tests" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="NONE" type="javascript">
-          <url>file://$PROJECT_DIR$/Poker-Frontend/e2e/src/spec/poker-frontend.e2e.spec.ts</url>
-          <line>70</line>
-          <log-expression expression="  it('should click results and show right estimations', async () =&gt; {&#10;" language="TypeScript" />
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="NONE" type="javascript">
-          <url>file://$PROJECT_DIR$/Poker-Frontend/e2e/src/spec/poker-frontend.e2e.spec.ts</url>
-          <line>88</line>
-          <log-expression expression="  it('should delete username', async () =&gt; {&#10;" language="TypeScript" />
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
