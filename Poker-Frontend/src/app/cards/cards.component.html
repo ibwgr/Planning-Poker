@@ -12,7 +12,7 @@
     </button>
   </mat-form-field>
     <br>
-  <mat-slide-toggle color="basic" class="mat-slideToggle" [disabled]="adminDisabled" [checked]="adminChecked" (change)="toggleAdmin()">Make me Admin</mat-slide-toggle>
+  <mat-slide-toggle color="basic" class="mat-slideToggle" *ngIf="userEntered" [checked]="adminChecked" (change)="toggleAdmin()">Make me Admin</mat-slide-toggle>
   </div>
 
   <div class="buttons">
@@ -21,7 +21,7 @@
   <button mat-raised-button color="base"  *ngIf="adminChecked" (click)="newRound()" class="newRound">New Round</button>
 
     <div class="userView">
-      <label class="currentUser">Current Users:</label>
+      <label class="currentUser" *ngIf="loggedInUsers.length">Current Users:</label>
       <div class="loggedInUsers" *ngFor="let user of loggedInUsers">
         <label >{{user}}</label>
       </div>
@@ -52,7 +52,7 @@
   </div>
 
 <div class="bottomContent">
-  <app-text-view [username]="username" [resetMessages]="resetMessages" [adminChecked]="adminChecked"></app-text-view>
+  <app-text-view [username]="username" [resetMessages]="resetMessages"></app-text-view>
   <app-estimations [votes]="votes" [fibonacciMaster]="fibonacciMaster" [adminChecked]="adminChecked"></app-estimations>
 </div>
 </div>
