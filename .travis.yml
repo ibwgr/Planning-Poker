@@ -1,7 +1,6 @@
 dist: xenial
 sudo: true
 
-
 env:
   global:
   - MOZ_HEADLESS=1
@@ -17,17 +16,13 @@ addons:
     organization: "ibwgr"
     token: ${SONAR_TOKEN}
 
-
-
 cache:
   directories:
     - Poker-Frontend/node_modules
 
-
 before_script:
   - npm i protractor
   - ./node_modules/protractor/bin/webdriver-manager update
-
 
 script:
     - cd Poker-Frontend
