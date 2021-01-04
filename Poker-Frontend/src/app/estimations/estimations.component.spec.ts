@@ -3,7 +3,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { EstimationsComponent } from './estimations.component';
 import {CardsComponent} from "../cards/cards.component";
 import {TextViewComponent} from "../text-view/text-view.component";
-import {ErrorComponent} from "../error/error.component";
 import {HeaderComponent} from "../header/header.component";
 import {FooterComponent} from "../footer/footer.component";
 import {MatLabel} from "@angular/material/form-field";
@@ -21,7 +20,6 @@ describe('EstimationsComponent', () => {
         EstimationsComponent,
         CardsComponent,
         TextViewComponent,
-        ErrorComponent,
         HeaderComponent,
         FooterComponent,
         MatLabel,

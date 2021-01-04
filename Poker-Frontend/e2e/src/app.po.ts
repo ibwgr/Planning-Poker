@@ -14,6 +14,7 @@ const thirdCard = by.css('.ng-star-inserted:nth-of-type(3) mat-card');
 const submitVoteButton = by.css('.mat-button-base.mat-flat-button.mat-primary.ng-star-inserted.voteButton');
 const showResultsButton = by.css('.averageButton.mat-base.mat-button-base.mat-raised-button.ng-star-inserted');
 const deleteUserButton = by.css('.buttons [color=\'base\']:nth-of-type(2)');
+const chatWindowLabel = by.css('.acceptance-criterias');
 
 export class AppPage {
 
@@ -55,6 +56,12 @@ export class AppPage {
 
   async getSubmittedUserLabel(): Promise<string> {
     const label = element(submittedUserLabel);
+    await BrowserUtils.waitForElement(label);
+    return label.getText()
+  }
+
+  async getChatWindowLabel(): Promise<string> {
+    const label = element(chatWindowLabel);
     await BrowserUtils.waitForElement(label);
     return label.getText()
   }
