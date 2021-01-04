@@ -53,9 +53,8 @@ export class CardsComponent implements OnInit {
       if (message.type === 'newRound'){
         this.resetValues();
       }
-    }, () => {
-      this.showErrorMessage()
-    });
+    },
+    );
   }
 
   ngOnInit(): void {
@@ -81,7 +80,7 @@ export class CardsComponent implements OnInit {
     this.userEntered = false;
   }
 
-  private addUserForAll(message) {
+  addUserForAll(message): void {
     this.loggedInUsers.push(message.user);
     this.totalVoters++;
     if(this.adminChecked) {
@@ -89,7 +88,7 @@ export class CardsComponent implements OnInit {
     }
   }
 
-  private deleteUserForAll(message) {
+  deleteUserForAll(message): void {
     this.loggedInUsers.splice(this.loggedInUsers.indexOf(message.user), 1);
     this.totalVoters--;
     if(this.adminChecked) {
@@ -97,7 +96,7 @@ export class CardsComponent implements OnInit {
     }
   }
 
-  private sendAdminsUserListToAll() {
+  sendAdminsUserListToAll(): void {
     this.sendToWebsocketServer('updateUser', this.loggedInUsers, "")
   }
 
@@ -106,7 +105,7 @@ export class CardsComponent implements OnInit {
     this.sendToWebsocketServer('sendUserListToAdmin', "", this.username);
   }
 
-  private generateAdminsUserlist(userList) {
+  generateAdminsUserlist(userList): void {
     if(this.adminChecked){
       this.concatUserList(userList);
       this.sendAdminsUserListToAll();
@@ -114,7 +113,7 @@ export class CardsComponent implements OnInit {
     }
   }
 
-  private concatUserList(userList) {
+  concatUserList(userList): void {
     let concatenatedUserList = [...this.loggedInUsers, ...userList];
     let userListSet = new Set(concatenatedUserList);
     this.loggedInUsers = Array.from(userListSet);
@@ -132,7 +131,7 @@ export class CardsComponent implements OnInit {
     this.sendToWebsocketServer('newRound',"","")
   }
 
-  private resetValues(): void {
+  resetValues(): void {
     this.freezeCards = false;
     this.buttonClicked = false;
     this.votes = [];
@@ -143,7 +142,7 @@ export class CardsComponent implements OnInit {
     this.amountOfVotings = 0;
   }
 
-  private sendToWebsocketServer(messageType: string, messageContent: any, user: string): void {
+  sendToWebsocketServer(messageType: string, messageContent: any, user: string): void {
     this.connectionService.connection.next({
       user: user, type: messageType, text: messageContent,
     });
@@ -156,9 +155,4 @@ export class CardsComponent implements OnInit {
   blackCoffee(): void {
     this.imgSrc = "assets/images/coffee.png"
   }
-
-  showErrorMessage(): string{
-  return this.errorMessage = 'WebSocketServer is not available, please contact your administrator!!'
-  }
-
 }

@@ -61,7 +61,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
   }
 
 
-  showResults(votes): any{
+  showResults(votes): any {
     const estimations = this
       .removeUsernames(votes)
       .filter(this.removeZeros());
@@ -95,7 +95,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
     };
   }
 
-   calcAverage(estimations): number{
+   calcAverage(estimations): number {
     const average = this.calcSum(estimations) / estimations.length;
     let nextFibonacci = 0;
 

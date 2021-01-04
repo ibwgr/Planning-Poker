@@ -4,7 +4,7 @@ import {BrowserUtils} from './spec/BrowserUtils';
 
 const submittUserButtonLabel = by.css('.buttons [color=\'base\']:nth-of-type(1) .mat-button-wrapper');
 const usernameLabel = by.xpath('//label[@id=\'mat-form-field-label-1\']/mat-label[.=\'Your Name\']');
-const adminlabel = by.css('.mat-slide-toggle-content');
+const adminLabel = by.css('.mat-slide-toggle-content');
 const userButton = by.css('.buttons [color=\'base\']:nth-of-type(1)');
 const submittedUserLabel = by.css('.loggedInUsers.ng-star-inserted > label');
 const adminToggle = by.css('.mat-slide-toggle-bar');
@@ -43,7 +43,7 @@ export class AppPage {
   }
 
   async getAdminlabel(): Promise<string> {
-    const label = element(adminlabel);
+    const label = element(adminLabel);
     await BrowserUtils.waitForElement(label);
     return label.getText()
   }
