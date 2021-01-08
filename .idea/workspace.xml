@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/services/connection.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/services/connection.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebSocketServer/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WebSocketServer/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebSocketServer/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,14 +60,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.14" />
+    <property name="javascript.nodejs.core.library.configured.version" value="15.3.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.20" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Poker-Frontend" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/Poker-Frontend/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Poker-Frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -80,7 +84,18 @@
       <recent name="$PROJECT_DIR$/Poker-Frontend/src/assets/images" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
+  <component name="RunManager" selected="Protractor.EstimationsComponent.should calculate right average">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="E2E Tests (Planning-Poker-Frontend)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/Planning-Poker-Frontend/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -97,6 +112,20 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
+    <configuration name="EstimationsComponent.should calculate right average" type="JavaScriptTestRunnerProtractor" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/Poker-Frontend/protractor-conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/Poker-Frontend/node_modules/protractor" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.spec.ts" />
+      <test-names>
+        <test-name value="EstimationsComponent" />
+        <test-name value="should calculate right average" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -110,8 +139,13 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Protractor.EstimationsComponent.should calculate right average" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -127,6 +161,9 @@
       <workItem from="1608645948150" duration="1267000" />
       <workItem from="1608708271767" duration="12048000" />
       <workItem from="1609796923566" duration="1850000" />
+      <workItem from="1610030089269" duration="2007000" />
+      <workItem from="1610087799281" duration="1446000" />
+      <workItem from="1610105664522" duration="368000" />
     </task>
     <task id="LOCAL-00024" summary="fix tests">
       <created>1609342491699</created>
@@ -475,7 +512,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -510,5 +547,9 @@
     <MESSAGE value="fix-tests" />
     <MESSAGE value="remove error-component" />
     <option name="LAST_COMMIT_MESSAGE" value="remove error-component" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
