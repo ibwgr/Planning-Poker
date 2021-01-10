@@ -1,31 +1,38 @@
 .container {
-  margin-top: 30px;
-  display: block;
-  background-color: darkgreen;
+  background-color: green;
+  margin-left: 50px;
+  width: 700px;
+  height: auto;
+
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.estimationHeader {
+  font-family: "TheSans Swisscom", Roboto, "Helvetica Neue", serif;
+  color: white;
+  font-size: medium;
+  display: flex;
 }
 
 .result {
   font-size: 20px;
-  margin-left: 20px;
   margin-top: 20px;
-  color: yellow;
-  font-weight: bold;
+  color: white;
 }
 
 .highest {
   font-size: 20px;
   margin-left: 20px;
   margin-top: 20px;
-  color: red;
-  font-weight: bold;
+  color: white;
 }
 
 .lowest {
   font-size: 20px;
   margin-left: 20px;
   margin-top: 20px;
-  color: aquamarine;
-  font-weight: bold;
+  color: white;
 }
 
 .average {
@@ -37,18 +44,25 @@
   margin-top: 20px;
   margin-right: 10px;
   color: white;
-  font-weight: bold;
   background-color: green;
-  padding: 10px;
+  padding-right: 10px;
 }
 
 .averageButton {
   height: 40px;
   margin-top: 20px;
+  width: fit-content;
 }
 
 @media screen and (max-width: 768px) {
   .average {
     margin-left: 20px;
+  }
+
+  .container {
+    margin-left: 20px;
+    padding-right: 20px;
+
+    width: 675px;
   }
 }

@@ -1,6 +1,6 @@
-import {Component, Input, OnInit, Output, EventEmitter, OnChanges, SimpleChanges} from '@angular/core';
+import {Component, Input, OnInit, OnChanges, SimpleChanges} from '@angular/core';
 import {ConnectionService} from "../services/connection.service";
-import {logger} from "codelyzer/util/logger";
+
 
 @Component({
   selector: 'app-estimations',
@@ -16,6 +16,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
   highestEstimation: string;
   lowestEstimation: string;
   allEstimations: any[];
+
 
 
   constructor(private connectionService: ConnectionService) {
@@ -66,14 +67,14 @@ export class EstimationsComponent implements OnInit, OnChanges {
       .removeUsernames(votes)
       .filter(this.removeZeros());
 
-    this.averageEstimation = "Average Estimation: " + this.calcAverage(estimations);
+    this.averageEstimation = "Average: " + this.calcAverage(estimations);
     this.sendToWebsocketServer('averageEstimation', this.averageEstimation);
 
-    this.highestEstimation = "Highest Estimation: " + Math.max.apply(null,estimations);
+    this.highestEstimation = "Highest: " + Math.max.apply(null,estimations);
     this.sendToWebsocketServer('highestEstimation', this.highestEstimation);
 
-    this.lowestEstimation = "Lowest Estimation: " + Math.min.apply(null,estimations);
-    this.sendToWebsocketServer('lowestEstimation', this.lowestEstimation)
+    this.lowestEstimation = "Lowest: " + Math.min.apply(null,estimations);
+    this.sendToWebsocketServer('lowestEstimation', this.lowestEstimation);
 
     this.showEstimation(this.votes);
     this.sendToWebsocketServer('estimations', this.votes)
