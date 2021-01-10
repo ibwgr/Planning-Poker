@@ -3,7 +3,6 @@ import {CardsComponent} from './cards.component';
 import {LocalStorageService} from "../services/local-storage.service";
 import {EstimationsComponent} from "../estimations/estimations.component";
 import {TextViewComponent} from "../text-view/text-view.component";
-import {ErrorComponent} from "../error/error.component";
 import {HeaderComponent} from "../header/header.component";
 import {FooterComponent} from "../footer/footer.component";
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core'
@@ -22,7 +21,6 @@ describe('CardsComponent', () => {
         CardsComponent,
         TextViewComponent,
         EstimationsComponent,
-        ErrorComponent,
         HeaderComponent,
         FooterComponent
       ],
