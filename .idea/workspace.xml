@@ -75,7 +75,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="15.3.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.14" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Poker-Frontend" />
     <property name="node.js.detected.package.tslint" value="true" />
