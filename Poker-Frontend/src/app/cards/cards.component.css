@@ -46,7 +46,7 @@ mat-card:hover {
 .voteButton {
   height: 40px;
   width: auto;
-  margin-top: 30px;
+  margin-top: 10px;
   border-color: white;
   border-style: solid;
 }
@@ -114,18 +114,28 @@ mat-card:hover {
 
 .currentUser {
   margin-right: 20px;
-  margin-top: 10px;
+  display: flex;
 }
 .amountOfVotes {
   margin-right: 20px;
-  margin-top: 10px;
+  width: fit-content;
+  background-color: yellow;
 }
+
+.userComponent {
+  background-color: green;
+  margin: 20px;
+  height: fit-content;
+  padding: 30px;
+}
+
 
 .userView {
   color: white;
   display: flex;
   font-family: "TheSans Swisscom", Roboto, "Helvetica Neue", serif;
-  font-size: medium;
+  font-size: 20px;
+
 }
 
 .voterView {
@@ -139,7 +149,6 @@ mat-card:hover {
 
 .loggedInUsers {
   margin-right: 10px;
-  margin-top: 10px;
 }
 
 .loggedInVoter {
@@ -165,6 +174,9 @@ mat-card:hover {
 .singleUser {
   background-color: green;
   padding: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
 }
 
 
@@ -189,11 +201,21 @@ mat-card:hover {
   }
   .userView {
     display: block;
-    margin-bottom: 20px;
   }
  .mat-slideToggle{
     margin-bottom: 20px;
   }
  .voteButton {
+ }
+
+ .userComponent {
+   margin-right: 20px;
+   margin-left: 5px;
+   padding-right: 10px;
+
+ }
+
+ .newRound {
+   margin-right: 10px;
  }
 }

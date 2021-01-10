@@ -1,8 +1,7 @@
 <div class="container">
+  <label class="estimationHeader">Estimation results</label>
+  <button mat-raised-button color="base" *ngIf="adminChecked" class="averageButton" (click)="showResults(votes)">Show Estimations</button>
   <div class="average">
-
-    <button mat-raised-button color="base" *ngIf="adminChecked" class="averageButton" (click)="showResults(votes)">Show Results</button>
-
     <div class="result">{{averageEstimation}}</div>
     <div class="highest">{{highestEstimation}}</div>
     <div class="lowest">{{lowestEstimation}}</div>
@@ -10,7 +9,6 @@
   <div class="average">
     <div class="votes" *ngFor="let vote of allEstimations">{{vote}}</div>
   </div>
-
 </div>
 
 

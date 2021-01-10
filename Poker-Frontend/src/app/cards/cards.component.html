@@ -1,36 +1,37 @@
 
 <div class="main">
   <app-error [errorMessage]="errorMessage"></app-error>
-<div class="container">
-  <div class="topContent">
-  <div class="userHandling">
-  <mat-form-field [class.loggedIn]="userEntered" class="user">
-    <mat-label class="name-label">Your Name</mat-label>
-    <input matInput type ="text" [(ngModel)]="username" [readonly]="userEntered" id="userNameInput">
-    <button mat-button *ngIf="username" matSuffix mat-icon-button aria-label="Clear"  [class.invisible]="userEntered"  (click)="username=''">
-      <mat-icon>close</mat-icon>
-    </button>
-  </mat-form-field>
-    <br>
-  <mat-slide-toggle color="basic" class="mat-slideToggle" *ngIf="userEntered" [checked]="adminChecked" (change)="toggleAdmin()">Make me Admin</mat-slide-toggle>
-  </div>
+  <div class="container">
+    <div class="topContent">
 
-  <div class="buttons">
-    <button mat-raised-button color="base" class="enterUsername" (click)="enterUser()" [class.invisible]="userEntered">Submit Username</button>
-    <button mat-raised-button color="base" class="enterUsername" (click)="deleteUser()" [class.invisible]="!userEntered">Delete Username</button>
-  <button mat-raised-button color="base"  *ngIf="adminChecked" (click)="newRound()" class="newRound">New Round</button>
-
-    <div class="userView">
-      <label class="currentUser" *ngIf="loggedInUsers.length">Current Users:</label>
-      <div class="loggedInUsers" *ngFor="let user of loggedInUsers">
-        <label >{{user}}</label>
+      <div class="userHandling">
+        <mat-form-field [class.loggedIn]="userEntered" class="user">
+        <mat-label class="name-label">Your Name</mat-label>
+        <input matInput type ="text" [(ngModel)]="username" [readonly]="userEntered" id="userNameInput">
+        <button mat-button *ngIf="username" matSuffix mat-icon-button aria-label="Clear"  [class.invisible]="userEntered"  (click)="username=''">
+        <mat-icon>close</mat-icon></button>
+        </mat-form-field>
+        <br>
+        <mat-slide-toggle color="basic" class="mat-slideToggle" *ngIf="userEntered" [checked]="adminChecked" (change)="toggleAdmin()">Make me Admin</mat-slide-toggle>
       </div>
+
+      <div class="buttons">
+        <button mat-raised-button color="base" class="enterUsername" (click)="enterUser()" [class.invisible]="userEntered">Submit Username</button>
+        <button mat-raised-button color="base" class="enterUsername" (click)="deleteUser()" [class.invisible]="!userEntered">Delete Username</button>
+        <button mat-raised-button color="base"  *ngIf="adminChecked" (click)="newRound()" class="newRound">New Round</button>
+      </div>
+
+      <mat-card class="userComponent">
+        <div class="userView">
+          <label class="currentUser">Current Users:</label>
+          <div class="loggedInUsers" *ngFor="let user of loggedInUsers">
+            <label class="username" >{{user}}</label>
+         </div>
+        </div>
+      </mat-card>
     </div>
 
-  </div>
-  </div>
-
-  <div *ngIf="!adminChecked" class="cardsContainer">
+    <div *ngIf="!adminChecked" class="cardsContainer">
     <div class="cards" [class.freezeCards]="freezeCards" *ngFor="let pokerCard of fibonacciMaster, let i = index">
       <mat-card class="card" *ngIf="pokerCard !=0; else coffeCard" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard" ><label class="cardNumber">{{pokerCard}}</label></mat-card>
       <button mat-flat-button color="primary" *ngIf="activeCard === pokerCard && pokerCard != 0" class="voteButton" (click)="setEstimation(pokerCard)" [class.buttonClicked]="buttonClicked" >Vote now for {{pokerCard}} SP!</button>
@@ -38,22 +39,21 @@
         <mat-card class="card" (mouseover)="redCoffee()" (mouseout)="blackCoffee()" [class.clicked]="pokerCard === activeCard" (click)="activeCard = pokerCard"><img style="height: 40px" [src]="imgSrc" alt="coffee-image"></mat-card>
         <button mat-flat-button color="primary" *ngIf="activeCard === 0" class="voteButton" (click)="setEstimation(0)" [class.buttonClicked]="buttonClicked">Vote now for no estimation!</button>
       </ng-template>
+      </div>
+    </div>
+
+    <div class="voterView" *ngIf="adminChecked">
+      <div class="whoHasVoted">
+        <mat-card class="amountOfVotes">{{amountOfVotings}} of {{totalVoters}} Users have voted</mat-card>
+        <div class="loggedInVoter" *ngFor="let user of hasVoted">
+          <mat-card class="singleUser">{{user}}</mat-card>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottomContent">
+      <app-text-view [username]="username" [resetMessages]="resetMessages"></app-text-view>
+      <app-estimations [votes]="votes" [fibonacciMaster]="fibonacciMaster" [adminChecked]="adminChecked"></app-estimations>
     </div>
   </div>
-
-  <div class="voterView" *ngIf="adminChecked">
-    <div class="whoHasVoted">
-      <label class="amountOfVotes">{{amountOfVotings}} of {{totalVoters}} Users have voted.</label>
-      <div class="loggedInVoter" *ngFor="let user of hasVoted">
-        <label class="singleUser">{{user}}</label>
-    </div>
-  </div>
-
-  </div>
-
-<div class="bottomContent">
-  <app-text-view [username]="username" [resetMessages]="resetMessages"></app-text-view>
-  <app-estimations [votes]="votes" [fibonacciMaster]="fibonacciMaster" [adminChecked]="adminChecked"></app-estimations>
-</div>
-</div>
 </div>
