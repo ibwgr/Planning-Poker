@@ -1,6 +1,3 @@
-// @ts-check
-// Protractor configuration file, see link for more information
-// https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter, StacktraceOption } = require('jasmine-spec-reporter');
 
@@ -18,7 +15,6 @@ exports.config = {
     chromeOptions: {
       args: ['--no-sandbox', '--disable-gpu', '--headless', '--window-size=1280,720', '--disable-dev-shm-usage']
     },
-
   },
 
   directConnect: true,

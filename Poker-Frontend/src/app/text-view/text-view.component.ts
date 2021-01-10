@@ -29,7 +29,6 @@ export class TextViewComponent implements OnInit, OnChanges{
     })};
 
 
-
   ngOnInit(): void {
     if (this.localStorage.get("message") != null)
    this.messages = this.localStorage.get("message");
@@ -39,7 +38,6 @@ export class TextViewComponent implements OnInit, OnChanges{
     this.messages = this.resetMessages
   }
 
-
   submitText(): void {
     this.connectionService.connection.next( {
        type: 'chat-message', text: this.textcontent, user: this.username
@@ -47,10 +45,9 @@ export class TextViewComponent implements OnInit, OnChanges{
     this.messages.unshift(this.textcontent);
     this.textcontent = '';
     this.persistMessages("message", this.messages);
-
   }
 
-  persistMessages(key: string, value: any): void{
+  persistMessages(key: string, value: any): void {
       this.localStorage.set(key, value)
     }
 }

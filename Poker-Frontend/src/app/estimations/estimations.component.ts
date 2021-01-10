@@ -61,7 +61,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
   }
 
 
-  showResults(votes): any{
+  showResults(votes): any {
     const estimations = this
       .removeUsernames(votes)
       .filter(this.removeZeros());
@@ -95,16 +95,9 @@ export class EstimationsComponent implements OnInit, OnChanges {
     };
   }
 
-   calcAverage(estimations): number{
-    const average = this.calcSum(estimations) / estimations.length;
-    let nextFibonacci = 0;
-
-    this.fibonacciMaster.forEach((fibonacci) => {
-      if(average <= fibonacci && nextFibonacci === 0){
-        nextFibonacci = fibonacci;
-      }
-    });
-    return nextFibonacci;
+   calcAverage(estimations): number {
+    let average = this.calcSum(estimations) / estimations.length;
+    return Number.isInteger(average) ? average : Number.parseFloat(average.toFixed(2));
   }
 
    calcSum(estimations): number {

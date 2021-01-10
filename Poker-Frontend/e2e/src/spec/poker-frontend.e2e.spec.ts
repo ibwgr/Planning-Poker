@@ -26,7 +26,7 @@ describe("Planning-Poker Frontend tests", ()=> {
     expect(await page.submitUserButtonLabel()).toEqual('Submit Username');
     expect(await page.usernameLabel()).toEqual('Your Name');
     expect(await page.getNumberOfCards()).toBeGreaterThan(1);
-    expect(await page.getAdminlabel()).toEqual('Make me Admin')
+    expect(await page.getChatWindowLabel()).toEqual('Acceptance Criterias and Chat')
   });
 
   it('should enter and display username', async () => {
@@ -38,6 +38,7 @@ describe("Planning-Poker Frontend tests", ()=> {
     await page.clickSubmitUserButton();
     browser.waitForAngular();
     expect(await page.getSubmittedUserLabel()).toEqual('Roberto')
+    expect(await page.getAdminlabel()).toEqual('Make me Admin')
   });
 
   it('should click on 3rd card and vote-button', async () => {
@@ -54,7 +55,7 @@ describe("Planning-Poker Frontend tests", ()=> {
   });
 
   it('should enter and display Acceptance-Criterias', async () => {
-    element(by.css('.ng-pristine.ng-star-inserted.ng-untouched.ng-valid.text-input')).sendKeys('Test-Story');
+    element(by.css('.acceptance-criterias > .ng-pristine.ng-untouched.ng-valid.text-input')).sendKeys('Test-Story');
     browser.actions().sendKeys(protractor.Key.ENTER).perform();
     expect(element(by.css('.ng-star-inserted.text-area')).getAttribute('value')).toContain('Test-Story');
   });
