@@ -1,10 +1,10 @@
 
   <div class="text-view">
     <div class="content">
-      <label class="acceptance-criterias">Acceptance Criterias and Chat
+      <mat-card class="acceptance-criterias">Acceptance Criterias and Chat
         <textarea class="text-input" type="text" placeholder="enter your message here and press enter" [(ngModel)]="textcontent" (keyup.enter)="submitText()"></textarea>
         <textarea readonly class="text-area" *ngFor="let message of messages">{{message}}</textarea>
-      </label>
+      </mat-card>
     </div>
   </div>
 
