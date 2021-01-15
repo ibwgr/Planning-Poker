@@ -64,9 +64,9 @@ describe("Planning-Poker Frontend tests", ()=> {
     browser.actions().sendKeys(protractor.Key.END).perform();
     await page.clickShowResultsButton();
     browser.waitForAngular();
-    expect(element(by.css('.result')).getText()).toBe('Average Estimation: 3');
-    expect(element(by.css('.highest')).getText()).toBe('Highest Estimation: 3');
-    expect(element(by.css('.lowest')).getText()).toBe('Lowest Estimation: 3');
+    expect(element(by.css('.result')).getText()).toBe('Average: 3');
+    expect(element(by.css('.highest')).getText()).toBe('Highest: 3');
+    expect(element(by.css('.lowest')).getText()).toBe('Lowest: 3');
     expect(element(by.css('app-estimations > div > div:nth-of-type(2) > div:nth-of-type(1)')).getText()).toBe('Roberto:');
     expect(element(by.css('app-estimations > div > div:nth-of-type(2) > div:nth-of-type(2)')).getText()).toBe('3');
   });
