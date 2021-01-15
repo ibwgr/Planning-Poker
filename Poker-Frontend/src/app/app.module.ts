@@ -20,6 +20,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -48,7 +50,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     ScrollingModule,
     MatCheckboxModule,
     MatSlideToggleModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ErrorHandler],
   bootstrap: [AppComponent],
