@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/ngsw-config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/src/assets/icons/icon-128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/src/assets/icons/icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/src/assets/icons/icon-152x152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/src/assets/icons/icon-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/src/assets/icons/icon-384x384.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/src/assets/icons/icon-512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/src/assets/icons/icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/src/assets/icons/icon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/src/manifest.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Poker-Frontend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/e2e/src/spec/poker-frontend.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/e2e/src/spec/poker-frontend.e2e.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
