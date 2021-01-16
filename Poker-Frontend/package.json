@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "http-server -p 8080 -c-1 dist/Poker-Frontend",
+    "start": "node server.js",
     "build": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -30,6 +30,7 @@
     "@angular/service-worker": "~10.0.3",
     "chrome-launcher": "^0.13.4",
     "chromedriver": "^87.0.4",
+    "express": "^4.17.1",
     "karma-cli": "^2.0.0",
     "karma-firefox-launcher": "^2.1.0",
     "nginx": "0.0.0",
