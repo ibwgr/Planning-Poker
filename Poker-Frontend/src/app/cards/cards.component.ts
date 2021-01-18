@@ -83,7 +83,8 @@ export class CardsComponent implements OnInit {
     this.username = "";
     this.persistUsername("username", this.username);
     this.userEntered = false;
-    this.usernameHasValue = false
+    this.usernameHasValue = false;
+    this.freezeCards = true;
   }
 
   addUserForAll(message): void {
