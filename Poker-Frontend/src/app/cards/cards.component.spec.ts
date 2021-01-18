@@ -7,6 +7,7 @@ import {HeaderComponent} from "../header/header.component";
 import {FooterComponent} from "../footer/footer.component";
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core'
 import {FormsModule} from "@angular/forms";
+import {MatCard, MatCardModule} from '@angular/material/card';
 
 
 describe('CardsComponent', () => {
@@ -22,7 +23,7 @@ describe('CardsComponent', () => {
         TextViewComponent,
         EstimationsComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
       ],
       schemas:[
         CUSTOM_ELEMENTS_SCHEMA

@@ -7,12 +7,13 @@ import {LocalStorageService} from "../services/local-storage.service";
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css']
 })
+
 export class CardsComponent implements OnInit {
 
   @Input() fibonacciMaster;
   errorMessage: string;
   buttonClicked: boolean = false;
-  userEntered: boolean = false;
+  userEntered: boolean;
   username: string;
   votes: any = [];
   freezeCards: boolean = false;
@@ -25,9 +26,11 @@ export class CardsComponent implements OnInit {
   amountOfVotings: number = 0;
   totalVoters: number = 0;
   imgSrc = "assets/images/coffee.png";
+  usernameHasValue: boolean;
 
 
-  constructor(private connectionService: ConnectionService, private localStorage: LocalStorageService ) {
+  constructor(private connectionService: ConnectionService, private localStorage: LocalStorageService) {
+
     connectionService.connection.subscribe((data) => {
       const message = JSON.parse(data);
 
@@ -59,14 +62,16 @@ export class CardsComponent implements OnInit {
 
   ngOnInit(): void {
     this.username = this.localStorage.get("username");
+    this.freezeCards = true;
   }
 
   enterUser(): void {
-    this.sendToWebsocketServer('addUser',"", this.username);
-    this.userEntered = true;
-    this.persistUsername("username", this.username);
-    this.loggedInUsers.unshift(this.username);
-  }
+      this.sendToWebsocketServer('addUser',"", this.username);
+      this.userEntered = true;
+      this.persistUsername("username", this.username);
+      this.loggedInUsers.unshift(this.username);
+      this.freezeCards = false;
+    }
 
   persistUsername(key: string, value: any): void{
     this.localStorage.set(key, value)
@@ -78,6 +83,7 @@ export class CardsComponent implements OnInit {
     this.username = "";
     this.persistUsername("username", this.username);
     this.userEntered = false;
+    this.usernameHasValue = false
   }
 
   addUserForAll(message): void {
@@ -154,5 +160,11 @@ export class CardsComponent implements OnInit {
 
   blackCoffee(): void {
     this.imgSrc = "assets/images/coffee.png"
+  }
+
+  async userValue(): Promise<void> {
+    if (this.username.length > 1){
+      this.usernameHasValue = true
+    }
   }
 }
