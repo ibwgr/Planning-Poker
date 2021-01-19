@@ -55,6 +55,7 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .text-view {
   width: 700px;
   }

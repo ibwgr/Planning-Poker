@@ -4,6 +4,7 @@ import {Injectable} from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class LocalStorageService {
 
   localStorage: Storage;
@@ -20,7 +21,6 @@ export class LocalStorageService {
     return null;
   }
 
-
   set(key: string, value: any): boolean {
 
     if (this.isLocalStorageSupported){
@@ -35,7 +35,6 @@ export class LocalStorageService {
       this.localStorage.removeItem(key)
     }
   }
-
 
   get isLocalStorageSupported(): boolean {
     return !!this.localStorage

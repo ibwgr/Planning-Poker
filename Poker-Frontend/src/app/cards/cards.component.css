@@ -27,11 +27,8 @@
   cursor: pointer;
 }
 
-
 mat-card:hover {
   color: red;
-  border-color: yellow;
-  border-style: solid;
 }
 
 .clicked {
@@ -129,13 +126,11 @@ mat-card:hover {
   padding: 30px;
 }
 
-
 .userView {
   color: white;
   display: flex;
   font-family: "TheSans Swisscom", Roboto, "Helvetica Neue", serif;
   font-size: 20px;
-
 }
 
 .voterView {
@@ -179,8 +174,22 @@ mat-card:hover {
   margin-top: 20px;
 }
 
+.error {
+  margin-left: 20px;
+}
+
+.userError {
+  color: white;
+  font-size: 20px;
+}
+
+.coffeeImage {
+  height: 60px
+}
+
 
 @media screen and (max-width: 768px) {
+
   .card {
     width: 65px;
     height: 95px;
@@ -188,10 +197,12 @@ mat-card:hover {
     background-size: cover;
     font-size: 30px;
   }
+
   .cardsContainer {
     justify-content: left;
     margin: 20px;
   }
+
   .clicked {
     height: 60px;
     padding-top: 55px;
@@ -199,12 +210,15 @@ mat-card:hover {
   .bottomContent {
     display: block;
   }
+
   .userView {
     display: block;
   }
+
  .mat-slideToggle{
     margin-bottom: 20px;
   }
+
  .voteButton {
  }
 
@@ -212,10 +226,18 @@ mat-card:hover {
    margin-right: 20px;
    margin-left: 5px;
    padding-right: 10px;
-
  }
 
  .newRound {
    margin-right: 10px;
  }
+
+  .coffeeImage {
+    height: 25px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
 }
+
+
+
