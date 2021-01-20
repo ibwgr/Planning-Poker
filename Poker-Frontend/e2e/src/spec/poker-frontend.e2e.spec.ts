@@ -23,7 +23,6 @@ describe("Planning-Poker Frontend tests", ()=> {
 
   it('should check pageElements',  async () => {
     expect(await page.getTitleText()).toEqual("Planning Poker");
-    expect(await page.submitUserButtonLabel()).toEqual('Submit Username');
     expect(await page.usernameLabel()).toEqual('Your Name');
     expect(await page.getNumberOfCards()).toBeGreaterThan(1);
     expect(await page.getChatWindowLabel()).toEqual('Acceptance Criterias and Chat')
@@ -31,14 +30,15 @@ describe("Planning-Poker Frontend tests", ()=> {
 
   it('should enter and display username', async () => {
     element(by.css('input#userNameInput')).sendKeys('Roberto');
+    expect(await page.submitUserButtonLabel()).toEqual('Submit Username');
     expect(element(by.css('input#userNameInput')).getAttribute('value')).toBe('Roberto');
   });
 
   it('should submit and display username in current User Section',  async () => {
     await page.clickSubmitUserButton();
     browser.waitForAngular();
-    expect(await page.getSubmittedUserLabel()).toEqual('Roberto')
-    expect(await page.getAdminlabel()).toEqual('Make me Admin')
+    expect(await page.getSubmittedUserLabel()).toEqual('Roberto');
+    expect(await page.getAdminlabel()).toEqual('Admin-View')
   });
 
   it('should click on 3rd card and vote-button', async () => {
