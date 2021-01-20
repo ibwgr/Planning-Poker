@@ -163,8 +163,8 @@ export class CardsComponent implements OnInit {
     this.imgSrc = "assets/images/coffee.png"
   }
 
-  async userValue(): Promise<void> {
-    if (this.username.length > 1){
+  userValue(): void {
+    if (this.username?.length > 1){
       this.usernameHasValue = true
     }
   }
