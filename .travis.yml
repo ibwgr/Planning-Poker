@@ -30,5 +30,5 @@ script:
 
     - npm run test-headless
     - npm run e2e-headless
-    - sonar-scanner
+    - cd Poker-Frontend sonar-scanner
 
