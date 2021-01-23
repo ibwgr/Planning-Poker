@@ -7,6 +7,7 @@ import {ConnectionService} from "../services/connection.service";
   templateUrl: './estimations.component.html',
   styleUrls: ['./estimations.component.css']
 })
+
 export class EstimationsComponent implements OnInit, OnChanges {
 
   @Input() votes;
@@ -16,7 +17,6 @@ export class EstimationsComponent implements OnInit, OnChanges {
   highestEstimation: string;
   lowestEstimation: string;
   allEstimations: any[];
-
 
 
   constructor(private connectionService: ConnectionService) {
@@ -47,8 +47,7 @@ export class EstimationsComponent implements OnInit, OnChanges {
     });
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
     this.resetEstimations()
@@ -60,7 +59,6 @@ export class EstimationsComponent implements OnInit, OnChanges {
     this.lowestEstimation = null;
     this.allEstimations = [];
   }
-
 
   showResults(votes): any {
     const estimations = this

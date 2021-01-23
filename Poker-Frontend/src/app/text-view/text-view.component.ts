@@ -7,8 +7,8 @@ import {LocalStorageService} from "../services/local-storage.service";
   templateUrl: './text-view.component.html',
   styleUrls: ['./text-view.component.css']
 })
-export class TextViewComponent implements OnInit, OnChanges{
 
+export class TextViewComponent implements OnInit, OnChanges{
 
   @Input() username: string;
   @Input() resetMessages;
@@ -25,8 +25,9 @@ export class TextViewComponent implements OnInit, OnChanges{
       this.persistMessages("message", this.messages);
     } else if(message.type === 'newRound'){
       this.messages = [];
-    }
-    })};
+      }
+    })
+  };
 
 
   ngOnInit(): void {
