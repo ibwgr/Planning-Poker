@@ -13,9 +13,5 @@
     "test-headless": "npm run start-websocket-local & cd Poker-Frontend && ng test --watch=false --browsers=ChromeHeadless",
     "e2e": " cd Poker-Frontend && protractor conf.js",
     "e2e-headless": "cd Poker-Frontend && protractor protractor-conf.js"
-  },
-
-  "dependencies": {
-    
   }
 }
