@@ -33,8 +33,8 @@ import { environment } from '../environments/environment';
     HeaderComponent,
     FooterComponent,
     TextViewComponent
-
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -56,4 +56,5 @@ import { environment } from '../environments/environment';
   providers: [ErrorHandler],
   bootstrap: [AppComponent],
 })
+
 export class AppModule { }

@@ -86,6 +86,6 @@ describe("Planning-Poker Frontend tests", ()=> {
   it('should delete username', async () => {
     await page.clickDeleteUserButton();
     browser.waitForAngular();
-    expect(element(by.css('.loggedInUsers.ng-star-inserted')).isPresent()).toBeFalsy();
+    expect(element(by.css('input#userNameInput')).getAttribute('value')).toBe('');
   });
 });

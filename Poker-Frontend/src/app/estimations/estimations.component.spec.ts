@@ -7,11 +7,11 @@ import {HeaderComponent} from "../header/header.component";
 import {FooterComponent} from "../footer/footer.component";
 import {MatLabel} from "@angular/material/form-field";
 import {MatSlideToggle} from "@angular/material/slide-toggle";
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('EstimationsComponent', () => {
   let component: EstimationsComponent;
   let fixture: ComponentFixture<EstimationsComponent>;
-
 
 
   beforeEach(async(() => {
@@ -23,7 +23,10 @@ describe('EstimationsComponent', () => {
         HeaderComponent,
         FooterComponent,
         MatLabel,
-        MatSlideToggle ]
+        MatSlideToggle ],
+      schemas:[
+        CUSTOM_ELEMENTS_SCHEMA
+      ],
     })
     .compileComponents();
   }));
@@ -63,7 +66,4 @@ describe('EstimationsComponent', () => {
     let usernames = component.removeUsernames(values).filter(component.removeZeros());
     expect(usernames.length).toBe(3)
   });
-
-
-
 });

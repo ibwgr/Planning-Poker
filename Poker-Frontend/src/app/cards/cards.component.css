@@ -219,9 +219,6 @@ mat-card:hover {
     margin-bottom: 20px;
   }
 
- .voteButton {
- }
-
  .userComponent {
    margin-right: 20px;
    margin-left: 5px;
@@ -238,6 +235,3 @@ mat-card:hover {
     padding-bottom: 10px;
   }
 }
-
-
-

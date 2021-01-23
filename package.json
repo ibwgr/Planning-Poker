@@ -1,0 +1,18 @@
+{
+  "name": "Planning-Poker",
+  "version": "1.0.0",
+
+  "scripts": {
+    "start-frontend-local": "cd Poker-Frontend && ng serve",
+    "start-websocket-local": "cd WebSocketServer && node server.js",
+
+    "start-prod": "cd Poker-Frontend && node server.js",
+    "start-local": "npm run start-frontend-local & npm run start-websocket-local",
+
+    "test": "npm run start-websocket-local & cd Poker-Frontend && ng test",
+    "test-headless": "npm run start-websocket-local & cd Poker-Frontend && ng test --watch=false --browsers=ChromeHeadless",
+    "e2e": " cd Poker-Frontend && protractor conf.js",
+    "e2e-headless": "cd Poker-Frontend && protractor protractor-conf.js",
+    "install": "cd Poker-Frontend && npm install"
+  }
+}

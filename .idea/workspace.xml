@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1b512cf-9495-40c7-8bac-a7dc5d865b3c" name="Default Changelist" comment="" />
+    <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +29,7 @@
         <option value="HTML File" />
         <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -180,7 +186,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f783bab0-6b96-49f2-99f6-ae889d244b9c" name="Default Changelist" comment="" />
+      <changelist id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="" />
       <created>1608390774367</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -189,83 +195,7 @@
       <workItem from="1608563032434" duration="5473000" />
       <workItem from="1608645948150" duration="1267000" />
       <workItem from="1608708271767" duration="12048000" />
-    </task>
-    <task id="LOCAL-00023" summary="fix tests">
-      <created>1609342073393</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1609342073393</updated>
-    </task>
-    <task id="LOCAL-00024" summary="fix tests">
-      <created>1609342491699</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1609342491699</updated>
-    </task>
-    <task id="LOCAL-00025" summary="fix tests">
-      <created>1609342848590</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1609342848590</updated>
-    </task>
-    <task id="LOCAL-00026" summary="fix tests">
-      <created>1609343491827</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1609343491827</updated>
-    </task>
-    <task id="LOCAL-00027" summary="fix tests">
-      <created>1609343678662</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1609343678662</updated>
-    </task>
-    <task id="LOCAL-00028" summary="fix tests">
-      <created>1609344408893</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1609344408893</updated>
-    </task>
-    <task id="LOCAL-00029" summary="fix tests">
-      <created>1609344962675</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1609344962675</updated>
-    </task>
-    <task id="LOCAL-00030" summary="fix tests">
-      <created>1609345492191</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1609345492191</updated>
-    </task>
-    <task id="LOCAL-00031" summary="fix tests">
-      <created>1609346388411</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1609346388411</updated>
-    </task>
-    <task id="LOCAL-00032" summary="fix tests">
-      <created>1609346867747</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1609346867747</updated>
-    </task>
-    <task id="LOCAL-00033" summary="fix tests">
-      <created>1609347051973</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1609347051973</updated>
+      <workItem from="1611399113804" duration="19106000" />
     </task>
     <task id="LOCAL-00034" summary="fix tests">
       <created>1609347511384</created>
@@ -533,7 +463,84 @@
       <option name="project" value="LOCAL" />
       <updated>1611143957073</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="docker">
+      <created>1611406897218</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1611406897219</updated>
+    </task>
+    <task id="LOCAL-00073" summary="environment">
+      <created>1611407940650</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1611407940651</updated>
+    </task>
+    <task id="LOCAL-00074" summary="fix-tests">
+      <created>1611410267563</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1611410267563</updated>
+    </task>
+    <task id="LOCAL-00075" summary="fix-tests">
+      <created>1611412194794</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1611412194795</updated>
+    </task>
+    <task id="LOCAL-00076" summary="fix-tests">
+      <created>1611412639482</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1611412639482</updated>
+    </task>
+    <task id="LOCAL-00077" summary="fix-tests">
+      <created>1611413080226</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1611413080226</updated>
+    </task>
+    <task id="LOCAL-00078" summary="fix-tests">
+      <created>1611413969503</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1611413969503</updated>
+    </task>
+    <task id="LOCAL-00079" summary="fix-tests">
+      <created>1611414140496</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1611414140496</updated>
+    </task>
+    <task id="LOCAL-00080" summary="fix-tests">
+      <created>1611419106568</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1611419106568</updated>
+    </task>
+    <task id="LOCAL-00081" summary="fix-tests">
+      <created>1611419331778</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1611419331778</updated>
+    </task>
+    <task id="LOCAL-00082" summary="fix-tests">
+      <created>1611419952224</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1611419952224</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,10 +577,12 @@
     <MESSAGE value="iPad responsive design" />
     <MESSAGE value="sonarqube" />
     <MESSAGE value="sonar-fix" />
-    <MESSAGE value="fix-tests" />
     <MESSAGE value="handling-update" />
     <MESSAGE value="Merge branch 'master' of https://github.com/ibwgr/Planning-Poker&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/ibwgr/Planning-Poker&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="docker" />
+    <MESSAGE value="environment" />
+    <MESSAGE value="fix-tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix-tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
