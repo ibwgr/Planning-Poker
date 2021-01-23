@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Poker-Frontend/nginx/default.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/cards/cards.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/estimations/estimations.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/footer/footer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/header/header.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/header/header.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/text-view/text-view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/services/connection.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/services/connection.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/environments/environment.prod.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,14 +195,7 @@
       <workItem from="1608563032434" duration="5473000" />
       <workItem from="1608645948150" duration="1267000" />
       <workItem from="1608708271767" duration="12048000" />
-      <workItem from="1611399113804" duration="6351000" />
-    </task>
-    <task id="LOCAL-00023" summary="fix tests">
-      <created>1609342073393</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1609342073393</updated>
+      <workItem from="1611399113804" duration="7311000" />
     </task>
     <task id="LOCAL-00024" summary="fix tests">
       <created>1609342491699</created>
@@ -552,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611143957073</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="docker">
+      <created>1611406897218</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1611406897219</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +580,8 @@
     <MESSAGE value="fix-tests" />
     <MESSAGE value="handling-update" />
     <MESSAGE value="Merge branch 'master' of https://github.com/ibwgr/Planning-Poker&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/ibwgr/Planning-Poker&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
