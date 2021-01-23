@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +31,7 @@
         <option value="HTML File" />
         <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -193,21 +197,7 @@
       <workItem from="1608563032434" duration="5473000" />
       <workItem from="1608645948150" duration="1267000" />
       <workItem from="1608708271767" duration="12048000" />
-      <workItem from="1611399113804" duration="12820000" />
-    </task>
-    <task id="LOCAL-00029" summary="fix tests">
-      <created>1609344962675</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1609344962675</updated>
-    </task>
-    <task id="LOCAL-00030" summary="fix tests">
-      <created>1609345492191</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1609345492191</updated>
+      <workItem from="1611399113804" duration="17825000" />
     </task>
     <task id="LOCAL-00031" summary="fix tests">
       <created>1609346388411</created>
@@ -538,7 +528,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611413080226</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="fix-tests">
+      <created>1611413969503</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1611413969503</updated>
+    </task>
+    <task id="LOCAL-00079" summary="fix-tests">
+      <created>1611414140496</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1611414140496</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
