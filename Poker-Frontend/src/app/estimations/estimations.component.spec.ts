@@ -14,7 +14,6 @@ describe('EstimationsComponent', () => {
   let fixture: ComponentFixture<EstimationsComponent>;
 
 
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -67,7 +66,4 @@ describe('EstimationsComponent', () => {
     let usernames = component.removeUsernames(values).filter(component.removeZeros());
     expect(usernames.length).toBe(3)
   });
-
-
-
 });
