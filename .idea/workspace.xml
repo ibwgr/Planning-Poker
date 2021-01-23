@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/app/services/connection.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/app/services/connection.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poker-Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poker-Frontend/e2e/src/spec/poker-frontend.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Poker-Frontend/e2e/src/spec/poker-frontend.e2e.spec.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,14 +193,7 @@
       <workItem from="1608563032434" duration="5473000" />
       <workItem from="1608645948150" duration="1267000" />
       <workItem from="1608708271767" duration="12048000" />
-      <workItem from="1611399113804" duration="7311000" />
-    </task>
-    <task id="LOCAL-00024" summary="fix tests">
-      <created>1609342491699</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1609342491699</updated>
+      <workItem from="1611399113804" duration="9249000" />
     </task>
     <task id="LOCAL-00025" summary="fix tests">
       <created>1609342848590</created>
@@ -540,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611406897219</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="environment">
+      <created>1611407940650</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1611407940651</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +579,8 @@
     <MESSAGE value="handling-update" />
     <MESSAGE value="Merge branch 'master' of https://github.com/ibwgr/Planning-Poker&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker" />
+    <MESSAGE value="environment" />
+    <option name="LAST_COMMIT_MESSAGE" value="environment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
