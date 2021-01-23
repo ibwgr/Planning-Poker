@@ -23,11 +23,11 @@ cache:
 before_script:
   - npm i protractor
   - ./node_modules/protractor/bin/webdriver-manager update
+  - cd WebSocketServer
+  - node server.js
+
 
 script:
-    - cd WebSocketServer
-    - node server.js
-    - cd -
     - cd Poker-Frontend
     - npm install
     - ./node_modules/protractor/bin/webdriver-manager update
