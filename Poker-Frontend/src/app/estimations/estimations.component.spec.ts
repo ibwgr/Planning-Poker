@@ -7,6 +7,7 @@ import {HeaderComponent} from "../header/header.component";
 import {FooterComponent} from "../footer/footer.component";
 import {MatLabel} from "@angular/material/form-field";
 import {MatSlideToggle} from "@angular/material/slide-toggle";
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('EstimationsComponent', () => {
   let component: EstimationsComponent;
@@ -23,7 +24,10 @@ describe('EstimationsComponent', () => {
         HeaderComponent,
         FooterComponent,
         MatLabel,
-        MatSlideToggle ]
+        MatSlideToggle ],
+      schemas:[
+        CUSTOM_ELEMENTS_SCHEMA
+      ],
     })
     .compileComponents();
   }));

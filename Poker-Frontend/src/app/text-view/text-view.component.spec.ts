@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TextViewComponent } from './text-view.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 
 describe('TextViewComponent', () => {
@@ -10,7 +11,10 @@ describe('TextViewComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         TextViewComponent,
-        ]
+        ],
+      schemas:[
+        CUSTOM_ELEMENTS_SCHEMA
+      ],
     })
     .compileComponents();
   }));
