@@ -27,6 +27,7 @@ before_script:
 
 
 script:
+  - npm run install
   - npm run test-headless
   - npm run e2e-headless
   - cd Poker-Frontend && sonar-scanner
