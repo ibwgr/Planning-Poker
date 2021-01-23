@@ -25,6 +25,9 @@ before_script:
   - ./node_modules/protractor/bin/webdriver-manager update
 
 script:
+    - cd WebSocketServer
+    - node server.js
+    - cd -
     - cd Poker-Frontend
     - npm install
     - ./node_modules/protractor/bin/webdriver-manager update
