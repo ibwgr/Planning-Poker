@@ -7,10 +7,10 @@
     "build": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "protractor conf.js",
+    "e2e": "./node_modules/protractor/bin/protractor conf.js",
     "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
     "heroku-postbuild": "ng build --prod",
-    "e2e-headless": "protractor protractor-conf.js"
+    "e2e-headless": "./node_modules/protractor/bin/protractor protractor-conf.js"
   },
   "private": true,
   "dependencies": {
