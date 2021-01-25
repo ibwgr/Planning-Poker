@@ -21,10 +21,9 @@ cache:
     - Poker-Frontend/node_modules
 
 before_script:
-  - npm install -g protractor
   - npm install
-  - ./node_modules/protractor/bin/webdriver-manager update
-  - ./node_modules/.bin/webdriver-manager update
+  - npm install -g protractor
+  - webdriver-manager update
 
 
 script:
