@@ -11,7 +11,7 @@
 
     "test": "npm run start-websocket-local & cd Poker-Frontend && ng test",
     "test-headless": "npm run start-websocket-local & cd Poker-Frontend && ng test --watch=false --browsers=ChromeHeadless",
-    "e2e": " cd Poker-Frontend && npm run e2e",
+    "e2e": "cd Poker-Frontend && npm run e2e",
     "e2e-headless": "cd Poker-Frontend && npm run e2e-headless",
     "install": "cd Poker-Frontend && npm install"
   }
