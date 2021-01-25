@@ -22,6 +22,7 @@ cache:
 
 before_script:
   - npm install
+  - npm install protractor
   - ./node_modules/protractor/bin/webdriver-manager update
   - ./node_modules/.bin/webdriver-manager update
 
