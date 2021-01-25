@@ -10,7 +10,7 @@
     "e2e": "protractor conf.js",
     "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
     "heroku-postbuild": "ng build --prod",
-    "e2e-headless": "protractor protractor-conf.js"
+    "e2e-headless": "node_modules/protractor/bin/webdriver-manager update && protractor protractor-conf.js"
   },
   "private": true,
   "dependencies": {
