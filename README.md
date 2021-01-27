@@ -3,7 +3,7 @@ Noch zu überarbeiten :)
 Planning-Poker
 ## Einleitung
 Dieses Projekt ist eine auf das Minimum reduzierte Planning-Poker-App. Es sollen innert kürzester Zeit Schätzrunden durchgeführt werden können, ohne dass zu viel Zeit für das Setup benötigt wird. 
-Die Applikation besteht aus zwei Projekten. Einem Websocket Server für den Datenaustausch zwischen den Clients, sowie einer Angular Applikatoin für das Frontend.
+Die Applikation besteht aus zwei Projekten. Einem Websocket Server für den Datenaustausch zwischen den Clients, sowie einer Angular Applikation für das Frontend.
 
 ## Vorbereitung und Applikationsstart
 GIT Repository clonen oder ZIP download
