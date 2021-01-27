@@ -2,9 +2,9 @@ Noch zu überarbeiten :)
 # Semesterarbeit
 Planning-Poker
 ## Einleitung
-Diese Applikation soll es ermöglichen, online und somit unabhänging von einem physischen an nur einem Ort verfügbaren Familienkalender,
-Termine für jedes Familienmitglied zu erfassen. Die Applikation besteht aus zwei Node.js Projekten. Eines für den Applikationsserver im Backend
-und eines für das Frontend.
+Dieses Projekt ist eine auf das Minimum reduzierte Planning-Poker-App. Es sollen innert kürzester Zeit Schätzrunden durchgeführt werden können, ohne dass zu viel Zeit für das Setup benötigt wird. 
+Die Applikation besteht aus zwei Projekten. Einem Websocket Server für den Datenaustausch zwischen den Clients, sowie einer Angular Applikatoin für das Frontend.
+
 ## Vorbereitung und Applikationsstart
 GIT Repository clonen oder ZIP download
 
