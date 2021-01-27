@@ -3,6 +3,7 @@
   "version": "1.0.0",
 
   "scripts": {
+    "install-both": "(cd WebSocketServer && npm install) && (cd Poker-Frontend && npm install)",
     "start-frontend-local": "cd Poker-Frontend && ng serve",
     "start-websocket-local": "cd WebSocketServer && node server.js",
 
@@ -12,7 +13,7 @@
     "test": "npm run start-websocket-local & cd Poker-Frontend && ng test",
     "e2e": "cd Poker-Frontend && npm run e2e",
     "install": "cd Poker-Frontend && npm install",
-    "test-headless": "npm run start-websocket-local & cd Poker-Frontend && ng test --watch=false --browsers=ChromeHeadless",
+    "test-headless": "npm run start-websocket-local & (cd Poker-Frontend && ng test --watch=false --browsers=ChromeHeadless) && pkill -f node",
     "e2e-headless": "cd Poker-Frontend && npm run e2e-headless"
   }
 }
