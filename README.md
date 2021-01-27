@@ -8,20 +8,6 @@ und eines für das Frontend.
 ## Vorbereitung und Applikationsstart
 GIT Repository clonen oder ZIP download
 
-### Erstellung der benötigten Datenbank
-Verwendung einer MariaDB oder MySQL Datenbank  
-Folgende Schritte müssen als root (oder als User mit entsprechenden Rechten) nach dem Einloggen in SQL ausgeführt werden:  
-1. Erstellung einer Datenbank mit dem Namen *calender*  
-Verwendeter Befehl im Terminal:
-```
-create database calender;
-```
-2. Erstellen der Tabelle *familycalender*  
-Zum Erstellen der benötigten Tabelle in der Datenbank, inkl. vorabgefüllter Daten zur Kalender-Demonstration, kann das File *calender.sql*, welches im *src* Verzeichnis zu finden ist, verwendet werden.  
-Dazu, immer noch im Terminal der Datenbank, das *.sql* File mittels dem `SOURCE` Befehl importieren
-```
-SOURCE <Pfad zur Datei>
-```
 ### Projekt in IntelliJ öffnen
 1. Backend  
   1a: Falls IntelliJ im *Hauptverezeichnis* fragt ob npm install ausgeführt werden soll, dies bestätigen.  
