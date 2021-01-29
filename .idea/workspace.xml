@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="" />
+    <list default="true" id="6b36da68-e19c-4856-955c-fbe9e23a0fb2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,13 +89,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Protractor.CardsComponent">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,6 +197,9 @@
       <workItem from="1608708271767" duration="12048000" />
       <workItem from="1611399113804" duration="19106000" />
       <workItem from="1611609019267" duration="642000" />
+      <workItem from="1611756581044" duration="227000" />
+      <workItem from="1611756859909" duration="5441000" />
+      <workItem from="1611767940150" duration="393000" />
     </task>
     <task id="LOCAL-00034" summary="fix tests">
       <created>1609347511384</created>
@@ -578,11 +586,6 @@
     <MESSAGE value="environment" />
     <MESSAGE value="fix-tests" />
     <option name="LAST_COMMIT_MESSAGE" value="fix-tests" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="844" height="1448" key="Git.Branch.Popup" />
-    <state width="844" height="1448" key="Git.Branch.Popup/1920.1080/1920.1080/3360.2100" />
-    <state width="844" height="1448" key="Git.Branch.Popup@3360.2100@192dpi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
