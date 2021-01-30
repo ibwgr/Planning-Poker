@@ -35,7 +35,7 @@ Sollte es bei der Verwendung des Webdrivers zu der Fehlermeldung kommen, dass up
 
 
 ### Systemvoraussetzungen
-Die Applikation wurde mit Node.js in den Versionen 12 und 14 geschrieben und getestet.
+Die Applikation wurde mit Node.js in den Versionen 12 und 14 geschrieben.
 Die verwendeten Befehle funktionieren auf Unix basierten Systemen wie Mac OS und Ubuntu. 
 
 
