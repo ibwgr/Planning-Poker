@@ -8,32 +8,30 @@ Die Applikation besteht aus zwei Projekten. Einem Websocket Server für den Date
 ## Vorbereitung und Applikationsstart
 GIT Repository clonen oder ZIP download
 
-### Projekt in IntelliJ öffnen
-1. Backend  
-  1a: Falls IntelliJ im *Hauptverezeichnis* fragt ob npm install ausgeführt werden soll, dies bestätigen.  
-  1b: Alternativ manuell im Terminal im *Hauptverzeichnis* den Befehl `npm install` ausführen
-2. Frontend  
-  2a: Falls IntelliJ im Verzeichnis *calenderView* fragt ob npm install ausgeführt werden soll, dies bestätigen.  
-  2b. Alternativ manuell im Terminal im Verzeichnis *calenderView* den Befehl `npm install` durchführen
-3. Im File *ormconfig.json*, zu finden im *Hauptverzeichnis*, den Usernamen und das Passwort für den Zugriff auf die Datenbank eintragen
+### Projekt installieren
+Im Hauptverezeichnis *Planning-Poker* in der CLI den Befehl `npm run install-both` ausführen.   
+Damit werden die benötigten Pakete für das Websocket Server- wie auch das Angular Frontend-Projekt installiert.
 
 ## Applikation starten
-1. Terminal im *Hauptverzeichnis* öffnen und das Backend mit dem Befehl `npm run start` ausführen
-2. Zweites Terminalfenster im Verzeichnis *calenderView* öffnen und das Frontend mit dem Befehl `npm run start` ausführen  
-  
--> Das Frontend kann nun im Browser unter http://localhost:1234 aufgerufen werden
+Mit dem Befehl `npm run start-local` in der CLI im *Hauptverzeichnis* wird der Websocket Server und das Frontend gestartet.   
+Das Frontend kann nun im Browser unter http://localhost:4200/ aufgerufen werden
 
 
 #### TESTS
 ##### Unit-Tests
-Für die Unit-Tests muss das Backend gestartet sein!  
-- Um die Unit-Tests in der Konsole zu starten, im Terminal im Verzeichnis *calenderView* den Befehl `npm run test` ausführen.
+Um die Unit-Tests im CLI zu starten, kann im *Hauptverzeichnis* der Befehl `npm run test` ausgeführt werden.   
+node_modules/protractor/bin/webdriver-manager update   
 
-#### End2End-Tests
-Für die End2End-Tests müssen das Backend und das Frontend gestartet sein.  
-- Um die End2End-Tests in der Konsole zu starten, im Terminal im Verzeichnis *Hauptverzeichnis* den Befehl `npm run test:e2e` ausführen.  
-- Im geöffneten Browserfenster auf `Run all specs` klicken
-- alternativ auf *calender.spec.js* doppelklicken
+##### End2End-Tests
+Um die Unit-Tests im CLI zu starten, kann im *Hauptverzeichnis* der Befehl `npm run e2e` ausgeführt werden.   
+
+#### Headless Tests
+Die Unit und End2End Tests können auch Headless ausgeführt werden.   
+Unit-Tests: `npm run test-headless`
+End2End-Tests: `npm run e2e-headless`
+
+
+
 
 
 
