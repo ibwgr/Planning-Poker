@@ -1,54 +1,42 @@
-Noch zu überarbeiten :)
 # Semesterarbeit
 Planning-Poker
+
 ## Einleitung
-Diese Applikation soll es ermöglichen, online und somit unabhänging von einem physischen an nur einem Ort verfügbaren Familienkalender,
-Termine für jedes Familienmitglied zu erfassen. Die Applikation besteht aus zwei Node.js Projekten. Eines für den Applikationsserver im Backend
-und eines für das Frontend.
+Dieses Projekt ist eine auf das Minimum reduzierte Planning-Poker-App. Es sollen innert kürzester Zeit Schätzrunden durchgeführt werden können, ohne dass zu viel Zeit für das Setup benötigt wird. 
+Die Applikation besteht aus zwei Projekten. Einem Websocket Server für den Datenaustausch zwischen den Clients, sowie einer Angular Applikation für das Frontend.
+
 ## Vorbereitung und Applikationsstart
 GIT Repository clonen oder ZIP download
 
-### Erstellung der benötigten Datenbank
-Verwendung einer MariaDB oder MySQL Datenbank  
-Folgende Schritte müssen als root (oder als User mit entsprechenden Rechten) nach dem Einloggen in SQL ausgeführt werden:  
-1. Erstellung einer Datenbank mit dem Namen *calender*  
-Verwendeter Befehl im Terminal:
-```
-create database calender;
-```
-2. Erstellen der Tabelle *familycalender*  
-Zum Erstellen der benötigten Tabelle in der Datenbank, inkl. vorabgefüllter Daten zur Kalender-Demonstration, kann das File *calender.sql*, welches im *src* Verzeichnis zu finden ist, verwendet werden.  
-Dazu, immer noch im Terminal der Datenbank, das *.sql* File mittels dem `SOURCE` Befehl importieren
-```
-SOURCE <Pfad zur Datei>
-```
-### Projekt in IntelliJ öffnen
-1. Backend  
-  1a: Falls IntelliJ im *Hauptverezeichnis* fragt ob npm install ausgeführt werden soll, dies bestätigen.  
-  1b: Alternativ manuell im Terminal im *Hauptverzeichnis* den Befehl `npm install` ausführen
-2. Frontend  
-  2a: Falls IntelliJ im Verzeichnis *calenderView* fragt ob npm install ausgeführt werden soll, dies bestätigen.  
-  2b. Alternativ manuell im Terminal im Verzeichnis *calenderView* den Befehl `npm install` durchführen
-3. Im File *ormconfig.json*, zu finden im *Hauptverzeichnis*, den Usernamen und das Passwort für den Zugriff auf die Datenbank eintragen
+### Projekt installieren
+Im Hauptverezeichnis *Planning-Poker* in der CLI den Befehl `npm run install-both` ausführen.   
+Damit werden die benötigten Pakete für das Websocket Server- wie auch das Angular Frontend-Projekt installiert.
 
-## Applikation starten
-1. Terminal im *Hauptverzeichnis* öffnen und das Backend mit dem Befehl `npm run start` ausführen
-2. Zweites Terminalfenster im Verzeichnis *calenderView* öffnen und das Frontend mit dem Befehl `npm run start` ausführen  
-  
--> Das Frontend kann nun im Browser unter http://localhost:1234 aufgerufen werden
+### Applikation starten
+Mit dem Befehl `npm run start-local` in der CLI im *Hauptverzeichnis* wird der Websocket Server und das Frontend gestartet.   
+Das Frontend kann nun im Browser unter http://localhost:4200/ aufgerufen werden
 
 
-#### TESTS
-##### Unit-Tests
-Für die Unit-Tests muss das Backend gestartet sein!  
-- Um die Unit-Tests in der Konsole zu starten, im Terminal im Verzeichnis *calenderView* den Befehl `npm run test` ausführen.
+## TESTS
+### Unit-Tests
+Um die Unit-Tests im CLI zu starten, kann im *Hauptverzeichnis* der Befehl `npm run test` ausgeführt werden.   
 
-#### End2End-Tests
-Für die End2End-Tests müssen das Backend und das Frontend gestartet sein.  
-- Um die End2End-Tests in der Konsole zu starten, im Terminal im Verzeichnis *Hauptverzeichnis* den Befehl `npm run test:e2e` ausführen.  
-- Im geöffneten Browserfenster auf `Run all specs` klicken
-- alternativ auf *calender.spec.js* doppelklicken
+### End2End-Tests
+Um die Unit-Tests im CLI zu starten, kann im *Hauptverzeichnis* der Befehl `npm run e2e` ausgeführt werden.   
+
+### Headless Tests
+Die Unit und End2End Tests können auch Headless ausgeführt werden.   
+Unit-Tests: `npm run test-headless`
+End2End-Tests: `npm run e2e-headless`
+
+#### Tipp
+Sollte es bei der Verwendung des Webdrivers zu der Fehlermeldung kommen, dass update-config.json  nicht gefunden werden kann, kann dieser mit folgendem Befehl im Verzeichnis *Poker-Frontend* manuell aktualisiert werden:   
+`node_modules/protractor/bin/webdriver-manager update`   
 
 
-
+### Systemvoraussetzungen
+- Node.js (Version 12 oder 14) inkl. npm
+- Angular cli
+- Chrome (für Tests benötigt)
+- Mac OS X oder Linux (Auf Ubuntu getestet)
 
