@@ -22,7 +22,7 @@ Das Frontend kann nun im Browser unter http://localhost:4200/ aufgerufen werden
 Um die Unit-Tests im CLI zu starten, kann im *Hauptverzeichnis* der Befehl `npm run test` ausgeführt werden.   
 
 ### End2End-Tests
-Um die Unit-Tests im CLI zu starten, kann im *Hauptverzeichnis* der Befehl `npm run e2e` ausgeführt werden.   
+Um die End2End-Tests im CLI zu starten, kann im *Hauptverzeichnis* der Befehl `npm run e2e` ausgeführt werden.   
 
 ### Headless Tests
 Die Unit und End2End Tests können auch Headless ausgeführt werden.   
@@ -38,5 +38,7 @@ Sollte es bei der Verwendung des Webdrivers zu der Fehlermeldung kommen, dass up
 - Node.js (Version 12 oder 14) inkl. npm
 - Angular cli
 - Chrome (für Tests benötigt)
-- Mac OS X oder Linux (Auf Ubuntu getestet)
+- Mac OS X oder Linux (Auf Ubuntu getestet)   
 
+### Demo
+Die Applikation ist unter https://planning-poker-frontend.herokuapp.com/ deployed.   
