@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/ibwgr/Planning-Poker.svg?branch=master)](https://travis-ci.com/ibwgr/Planning-Poker)
+
 # Semesterarbeit
 Planning-Poker
 
